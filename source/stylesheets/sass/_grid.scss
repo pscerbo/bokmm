@@ -1,0 +1,53 @@
+/**
+ *  Grid (_grid.scss)
+ */
+
+
+$baseWidth: 1140px;
+$minBaseWidth: 320px;
+
+/* Dev only Grid */
+.browserWidth {
+	max-width: $baseWidth;
+	margin: 0 auto;
+	background: lightblue;
+	text-align: center;
+	padding: 10px 0;
+	&:before {
+		content: "960+"
+	}
+	@media screen and (min-width: 320px) and (max-width: 480px) {
+		background: indianred;
+		&:before {
+			content: "320 - 480"
+		}
+	}
+	@media screen and (min-width: 481px) and (max-width: 640px) {
+		background: lightsalmon;
+		&:before {
+			content: "481 - 640"
+		}
+	}
+	@media screen and (min-width: 641px) and (max-width: 767px) {
+		background: lightseagreen;
+		&:before {
+			content: "641 - 767"
+		}
+	}
+	@media screen and (min-width: 768px) and (max-width: 960px) {
+		background: lightgoldenrodyellow;
+		&:before {
+			content: "768 - 960"
+		}
+	}
+	@media screen and (min-width: 961px) {
+		background: orangered;
+		&:before {
+			content: "961+"
+		}
+	}
+}
+
+
+
+

@@ -1,0 +1,42 @@
+/**
+ *  All IE Browsers (_ie.scss)
+ */
+
+/* IE8 & IE9 Only */
+.ie {
+	.select-style {
+		background: none;
+		@include rounded(0px);
+		margin-bottom: 15px;
+	}
+	select.select-style {
+		padding: 2px 5px 2px 8px;
+		width: 100%;
+	}
+}
+
+/* IE10 Only */
+html[data-useragent*='MSIE 10.0'] .select-style {
+	background: none;
+	@include rounded(0px);
+	margin-bottom: 15px;
+}
+
+html[data-useragent*='MSIE 10.0'] select.select-style {
+	padding: 2px 5px 2px 8px;
+	width: 100%;
+}
+
+/* Firefox Only */
+@-moz-document url-prefix() {
+	.select-style {
+		background: none;
+		@include rounded(0px);
+		margin-bottom: 15px;
+	}
+	select.select-style {
+		padding: 2px 5px 2px 8px;
+		width: 100%;
+		background: #FFF;
+	}
+}

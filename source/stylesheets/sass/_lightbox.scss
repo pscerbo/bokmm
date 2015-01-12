@@ -1,0 +1,139 @@
+/**
+ * Lightbox (_lightbox.scss)
+ */
+
+.white-popup {
+	position: relative;
+	background: #FFF;
+	padding: 20px;
+	width: auto;
+	max-width: 800px;
+	margin: 20px auto;
+	@include rounded(10px);
+	h2 {
+		font-size: 25px;
+		color: #333;
+		margin-bottom: 5px;
+	}
+	p {
+		margin: 0 0 18px 0;
+	}
+
+	a {
+		outline: none;
+	}
+
+	input[type=button] {
+		outline: none;
+	}
+
+	label {
+		float: left;
+		font-size: 18px;
+		color: #333;
+		margin-bottom: 15px;
+	}
+
+	dl {
+		margin-top: 30px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid $borderColor;
+		dd {
+			margin-left: 0;
+			margin-top: 20px;
+			input[type="submit"] {
+				padding: 15px 50px;
+			}
+		}
+	}
+
+	.colWrap {
+		@include cf;
+		float: left;
+		width: 100%;
+		display: block;
+		.col {
+			padding-left: 15px;
+			float: left;
+			font-weight: 600;
+			font-size: 14px;
+			&.one {
+				width: percentage(207px/760px);
+			}
+			&.two {
+				width: percentage(240px/760px);
+			}
+			&.three {
+				width: percentage(250px/760px);
+			}
+			@media screen and (max-width: 480px) {
+				padding-left: 0;
+				margin: 10px 0 20px 0;
+				&.one, &.two, &.three {
+					clear: both;
+					float: none;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	/* Security Questions */
+	.securityQuestions {
+		//background: indianred;
+		margin-top: 20px;
+		margin-right: -7px;
+		height: 450px;
+		@include cf;
+		overflow-y: scroll;
+		ul {
+			@include listReset;
+			margin-right: 20px;
+			li {
+				border-bottom: 1px solid $borderColor;
+				padding: 15px 0;
+				&:last-child {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+
+
+	@media screen and (max-width: 840px) {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	&.transDetails {
+		max-width: 450px;
+		table {
+			border: 0;
+			border-collapse: collapse;
+			tr {
+				td {
+					vertical-align: top;
+					padding-right: 10px;
+					padding-bottom: 10px;
+					font-size: 15px;
+					strong {
+						display: block;
+					}
+					a {
+						strong {
+							display: inline;
+						}
+					}
+					span.red {
+						color: #ee2e2e;
+						font-weight: 600;
+					}
+					span.blue {
+						color: #1163eb;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,128 @@
+/**
+ * Help Section (_help.scss)
+ */
+
+.boxModule {
+	&.help {
+		.wrap {
+			border-bottom: 1px solid $borderColor;
+			margin-bottom: 30px;
+			padding-bottom: 20px;
+			@include cf;
+		}
+
+		.titleCol {
+			float: left;
+			width: percentage(210px/920px);
+			font-size: 14px;
+			color: #000;
+			font-weight: 700;
+			margin-bottom: 20px;
+			@media screen and (max-width: 640px) {
+				width: 100%;
+			}
+		}
+
+		.contentCol {
+			float: left;
+			width: percentage(708px/920px);
+			ul.links {
+				@include listReset;
+				font-size: 0;
+				li {
+					display: inline-block;
+					vertical-align: top;
+					font-size: 14px;
+					margin-bottom: 15px;
+					width: percentage(235px/708px);
+					padding-right: 10px;
+					a {
+						font-weight: 700;
+					}
+				}
+			}
+
+			.innerOne {
+				float: left;
+				width: percentage(235px/708px);
+			}
+
+			.innerTwo {
+				float: left;
+				width: percentage(473px/708px);
+			}
+
+			.innerOne, .innerTwo {
+				p {
+					font-size: 14px;
+					font-weight: 300;
+					line-height: 1.6em;
+				}
+			}
+
+			@media screen and (max-width: 767px) {
+				clear: both;
+				float: none;
+				width: 100%;
+			}
+
+			@media screen and (min-width: 320px) and (max-width: 640px) {
+				.innerOne, .innerTwo {
+					clear: both;
+					float: none;
+				}
+			}
+			@media screen and (min-width: 320px) and (max-width: 480px) {
+				ul.links {
+					li {
+						width: 100%;
+						display: block;
+					}
+				}
+			}
+		}
+
+		/* CTA Links */
+		.cta {
+			clear: both;
+			margin-top: 0px;
+			margin-bottom: 15px;
+			@include cf;
+			width: 100%;
+			.branch {
+				width: percentage(445px/920px);
+				display: inline-block;
+				vertical-align: top;
+				min-height: 60px;
+				background: url("img/icon-branch.png") no-repeat;
+				a {
+					display: block;
+					font-size: 22px;
+					font-weight: 700;
+					padding: 0 20px 0 75px;
+					text-decoration: none;
+				}
+			}
+			.contact {
+				display: inline-block;
+				vertical-align: top;
+				width: percentage(447px/920px);
+				min-height: 60px;
+				background: url("img/icon-contact.png") no-repeat;
+				a {
+					display: block;
+					font-size: 22px;
+					font-weight: 700;
+					padding: 0 0 0 75px;
+					text-decoration: none;
+				}
+			}
+			@media screen and (min-width: 320px) and (max-width: 767px) {
+				.branch, .contact {
+					width: 100%;
+					margin: 10px 0;
+				}
+			}
+		}
+	}
+}

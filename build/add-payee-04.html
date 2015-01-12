@@ -1,0 +1,348 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bank of Oklahoma</title>
+        <meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Always force latest IE rendering engine or request Chrome Frame -->
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+<!-- Stylesheets -->
+<link href="/stylesheets/styles.css" rel="stylesheet" type="text/css" />
+
+<!-- JavaScript -->
+<script src="/javascripts/vendor/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="/javascripts/vendor/jquery-ui.min.js" type="text/javascript"></script>
+
+<!-- Plugins -->
+<script src="/javascripts/vendor/respond.js" type="text/javascript"></script>
+<script src="/javascripts/vendor/pushy.min.js" type="text/javascript"></script>
+<script src="/javascripts/vendor/jquery.megamenu.js" type="text/javascript"></script>
+<script src="/javascripts/vendor/jquery.magnific-popup.min.js" type="text/javascript"></script>
+<script src="/javascripts/vendor/jquery.visible.min.js" type="text/javascript"></script>
+
+<!-- Custom -->
+<script src="/javascripts/jquery.accordion.js" type="text/javascript"></script>
+<script src="/javascripts/equalheight.js" type="text/javascript"></script>
+<script src="/javascripts/password.js" type="text/javascript"></script>
+<script src="/javascripts/plugins.js" type="text/javascript"></script>
+<script src="/javascripts/payee.js" type="text/javascript"></script>
+<script src="/javascripts/payee.filter.js" type="text/javascript"></script>
+<script src="/javascripts/datepicker.js" type="text/javascript"></script>
+<script src="/javascripts/transactionHistory.js" type="text/javascript"></script>
+<script src="/javascripts/main.js" type="text/javascript"></script>
+
+
+    </head>
+    <body>
+        <!-- Mobile Menu -->
+<div class="pushy pushy-right">
+    <div class="menuWrap">
+        <div class="userInfo">
+            <div class="welcome"> Welcome, <span>Jonathan BusinessName</span></div>
+            <ul>
+                <li>My Messages <span>(<a href="">2</a>)</span></li>
+                <li> <a href=""><span>Logout</span></a> </li>
+            </ul>
+            <div class="session">Last logged on Jul 29, 2014 11:00AM</div>
+        </div>
+        <ul class="mobile">
+            <li> <a href="#">Accounts and Activities</a>
+                <ul>
+                    <li class="title"> <a href="" class="noAccordion">Account Summary</a> </li>
+                    <li class="accountType">Deposit Accounts</li>
+                    <li> <a href="" class="noAccordion">Checking for Cash (...1234)</a> </li>
+                    <li> <a href="" class="noAccordion">Everyday Expenses and Bill (...1234)</a> </li>
+                    <li> <a href="" class="noAccordion">CDs Account (...1234)</a> </li>
+                    <li> <a href="" class="noAccordion">My Secret Savings (...1234)</a> </li>
+                    <li> <a href="" class="noAccordion">Another Secret Savings (...1234)</a> </li>
+                    <li class="accountType">Loan Accounts</li>
+                    <li> <a href="" class="noAccordion">Education Loan (...1234)</a> </li>
+                    <li class="accountType">Mortgage Accounts</li>
+                    <li> <a href="" class="noAccordion">Residential Loan (...1234)</a> </li>
+                </ul>
+            </li>
+            <li> <a href="#">Actions and Services</a>
+                <ul>
+                    <li> <a href="#" class="viewStatements-link noAccordion">View Online Statements</a> </li>
+                    <li> <a href="#" class="billPay-link">Pay Bills</a> </li>
+                    <li> <a href="#" class="alerts-link">Alerts</a> </li>
+                    <li> <a href="#" class="transfers-link">Transfer</a> </li>
+                    <li> <a href="#" class="accountServices-link">Account Services</a>
+                        <ul>
+                            <li><a href="#">Order Checks</a></li>
+                            <li><a href="#">Request a Stop Payment</a></li>
+                            <li><a href="#">Request a Check Copy</a></li>
+                            <li><a href="#">Request a Paper Statement Copy</a></li>
+                            <li><a href="#">Inquire about a BillPay Payment</a></li>
+                            <li><a href="#">Inquire about a Transaction</a></li>
+                            <li><a href="#">Direct Deposit Change Form</a></li>
+                            <li><a href="#">Contact Customer Service</a></li>
+                        </ul>
+                    </li>
+                    <li> <a href="#" class="forms-link">Forms</a> </li>
+                    <li> <a href="#" class="help-link">Help</a> </li>
+                    <li> <a href="#" class="newAccounts-link">New Accounts</a> </li>
+                </ul>
+            </li>
+            <li> <a href="#">Profile Settings</a>
+                <ul>
+                    <li> <a href="" class="noAccordion">Change Username/Password</a> </li>
+                    <li> <a href="" class="noAccordion">Add Eligible Accounts for View</a> </li>
+                    <li> <a href="" class="noAccordion">Change Contact Information</a> </li>
+                    <li> <a href="" class="noAccordion">Change Security Questions &amp; Answers</a> </li>
+                </ul>
+            </li>
+            <li> <a href="#" class="searchBtn">Transaction Search</a>
+                <ul class="transSearch">
+                    <li>
+                        <input type="text">
+                        <input type="submit" value="Search">
+                    </li>
+                </ul>
+            </li>
+            <li><a href="" class="customizeBtn">Customize Page</a></li>
+            <li><a href="" class="helpBtn">Help with Page</a></li>
+        </ul>
+    </div>
+</div>
+<!-- /Mobile Menu -->
+
+<div class="site-overlay"></div>
+
+<header class="push">
+    <div class="container">
+        <div id="logo"> <a href="index.html"></a> </div>
+        <!-- Toolbar -->
+        <div class="toolbar visibleDesktop">
+            <div class="session">Last logged on Jul 29, 2014 11:00AM</div>
+            <ul>
+                <li class="user">
+                    <div class="hover ellipsis">Welcome, <span>Jonathan BusinessName</span></div>
+                    <div class="userDropdown">
+                        <div>
+                            <ul>
+                                <li> <a href="">Change Username/Password</a> </li>
+                                <li> <a href="">Add Eligible Accounts for View</a> </li>
+                                <li> <a href="">Change Contact Information</a> </li>
+                                <li> <a href="">Change Security Questions &amp; Answers</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>My Messages <span>(<a href="">2</a>)</span></li>
+                <li><a href=""><span>Logout</span></a></li>
+            </ul>
+        </div>
+        <!-- /Toolbar -->
+        <!-- Mobile Menu Link -->
+        <div class="mobileMenu hiddenDesktop menu-btn">
+            Menu
+            <div class="notification">14</div>
+        </div>
+        <!-- /Mobile Menu Link -->
+    </div>
+</header>
+        <!-- Menu -->
+<nav class="push visibleDesktop">
+    <div class="container">
+        <ul class="megamenu">
+            <li class="accountsMenu"> <a href="javascript:void(0)">Accounts and Activities</a>
+                <div class="accountDropdown">
+                    <h2>Account Summary</h2>
+                    <div class="accountSummary">
+                        <h3>Deposit Accounts</h3>
+                        <table class="summary">
+                            <tr>
+                                <td><a href="">Checking for Cash (...1234)</a></td>
+                                <td class="last"><strong>$10,400.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">Everyday Expenses and Bill (...1234)</a></td>
+                                <td class="last"><strong>$10,400.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">CDs Account (...1234)</a></td>
+                                <td class="last"><strong>$10,000.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">My Secret Savings (...1234)</a></td>
+                                <td class="last"><strong>$10,000.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">Another Secret Savings (...1234)</a></td>
+                                <td class="last"><strong>$10,000.00</strong></td>
+                            </tr>
+                        </table>
+                        <div class="cleaner"></div>
+                        <h3>Loan Accounts</h3>
+                        <table class="summary">
+                            <tr>
+                                <td><a href="">Education Loan (...1234)</a></td>
+                                <td class="last"><strong>$5,000.00</strong></td>
+                            </tr>
+                        </table>
+                        <div class="cleaner"></div>
+                        <h3>Mortgage Accounts</h3>
+                        <table class="summary">
+                            <tr>
+                                <td><a href="">Residential Loan (...1234)</a></td>
+                                <td class="last"><strong>$180,000.00</strong></td>
+                            </tr>
+                        </table>
+                        <div class="cleaner"></div>
+                    </div>
+                </div>
+            </li>
+            <li class="actionsMenu"> <a href="javascript:void(0)">Actions and Tools</a>
+                <div class="actionsDropdown">
+                    <div class="colFull top">
+                        <div class="viewStatements-link"> Statements </div>
+                        <ul>
+                            <li><a href="">View Online Statement</a></li>
+                        </ul>
+                    </div>
+                    <div class="colWrap">
+                        <div class="col">
+                            <dl>
+                                <dt class="transfers-link"> Transfer </dt>
+                                <dd>
+                                    <ul>
+                                        <li><a href="">Add New Transfer</a></li>
+                                        <li><a href="">Pending Transfers</a></li>
+                                        <li><a href="">Transfer History</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt class="billPay-link"> Bill Pay </dt>
+                                <dd>
+                                    <ul>
+                                        <li><a href="">Schedule One-Time Payment</a></li>
+                                        <li><a href="">Recurring Payment</a></li>
+                                        <li><a href="">Manage Payees</a></li>
+                                        <li><a href="">Pending Payments</a></li>
+                                        <li><a href="">Payment History</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt class="alerts-link"> Alerts </dt>
+                                <dd>
+                                    <ul>
+                                        <li><a href="">Manage Alerts</a></li>
+                                        <li><a href="">Schedule Alerts</a></li>
+                                        <li><a href="">Manage Contact Points</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col">
+                            <dl>
+                                <dt class="accountServices-link"> Accounts Services </dt>
+                                <dd>
+                                    <ul>
+                                        <li><a href="">View Online Statement</a></li>
+                                        <li><a href="">Update My Overdraft Coverage Preferences</a></li>
+                                        <li><a href="">Order Checks</a></li>
+                                        <li><a href="">Request a Stop Payment</a></li>
+                                        <li><a href="">Request a Check Copy</a></li>
+                                        <li><a href="">Request a Paper Statement Copy</a></li>
+                                        <li><a href="">Inquire about a BillPay Payment</a></li>
+                                        <li><a href="">Inquire about a Transaction</a></li>
+                                        <li><a href="">Direct Deposit Change Form</a></li>
+                                        <li><a href="">Contact Customer Service</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt class="help-link"> Help </dt>
+                                <dd>
+                                    <ul>
+                                        <li><a href="">Help center</a></li>
+                                        <li><a href="">FAQ</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="colFull">
+                        <div class="newAccount-link"> New Accounts </div>
+                        <ul>
+                            <li><a href="">Apply for an Account</a></li>
+                            <li><a href="">Apply for a Loan</a></li>
+                            <li><a href="">Apply for a Credit Card</a></li>
+                            <li><a href="">Apply for a Mortgage</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="searchMenu"> <a href=""></a>
+                <div class="searchDropdown">
+                    <input type="text" placeholder="Transaction Search">
+                    <input type="submit">
+                </div>
+            </li>
+            <li class="helpMenu"> <a href="">Help with Page</a> </li>
+        </ul>
+    </div>
+</nav>
+<!-- Menu -->
+
+        <!-- Content Area -->
+<div class="main push" role="main">
+    <div class="container">
+
+        <h1>Add a Payee</h1>
+
+        <div class="boxModule">
+
+            <!-- Steps -->
+            <div class="stepsWrap">
+                <ul>
+                    <li class="activeTask">Search<span></span></li>
+                    <li>Payee Details<span></span></li>
+                    <li>Verify<span></span></li>
+                    <li>Confirm</li>
+                </ul>
+            </div>
+            <!-- /Steps -->
+
+            <p>You successfully added the payee below. Click the payee name If you want to view or edit the payee's detail information.
+            </p>
+
+            <div class="payeeVerification">
+                <h2>Oklahoma Electric Cooperative</h2>
+
+                <a href="" class="btn blue">Make a payment</a>
+                <a href="" class="btn blue">Back to payee page</a>
+                <a href="" class="btn blue">Add another payee</a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- /Container -->
+</div>
+<!-- /Content Area (Main) -->
+
+        <!-- Footer -->
+<footer class="push">
+    <div class="container">
+        <ul>
+            <li> <a href="">Locations</a> </li>
+            <li> <a href="">Contact Center</a> </li>
+            <li> <a href="">Terms</a> </li>
+            <li> <a href="">Privacy</a> </li>
+            <li> <a href="">Full Site</a> </li>
+        </ul>
+    </div>
+</footer>
+<!-- /Footer -->
+    </body>
+</html>

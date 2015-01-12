@@ -1,0 +1,146 @@
+/**
+ * jQuery UI Datepicker (_datepicker.scss)
+ * Custom Styles
+ */
+
+.calendar-popup {
+	width: 262px;
+	display: none;
+	position: absolute;
+	top: 47px;
+	background: #FFF;
+	@include box-shadow(0px, 0px, 5px, rgba(0, 0, 0, 0.25));
+	z-index: 400;
+
+	.paymentNote {
+		margin: 0;
+		font-size: 11px;
+		font-style: normal;
+		text-align: left;
+		padding: 15px;
+	}
+	@media screen and (min-width: 320px) and (max-width: 400px) {
+		top: 47px;
+		left: 1px;
+	}
+	@media screen and (min-width: 400px) and (max-width: 480px) {
+		top: 47px;
+		left: 66px;
+	}
+	@media screen and (min-width: 481px) and (max-width: 640px) {
+		top: 78px;
+		right: 0;
+	}
+	@media screen and (min-width: 641px) and (max-width: 649px) {
+		top: 67px;
+		right: 0;
+	}
+	@media screen and (min-width: 650px) and (max-width: 870px) {
+		top: 47px;
+		right: 0;
+	}
+	@media screen and (min-width: 871px) and (max-width: 885px) {
+		top: 76px;
+		left: 0;
+	}
+	@media screen and (min-width: 886px) {
+		left: 65px;
+	}
+}
+
+/* Custom Calendar Styles */
+.ui-datepicker {
+	padding: 10px;
+}
+
+.ui-datepicker-current {
+	background: #FFF !important;
+	color: $linkBlue  !important;
+	float: none !important;
+}
+
+.ui-datepicker-buttonpane {
+	text-align: center  !important;
+	padding: 5px 0  !important;
+}
+
+.ui-datepicker-header {
+	background: #FFF;
+	border: 0;
+	color: #000;
+	font-size: 18px;
+	font-weight: 400;
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	@include rounded(0px);
+}
+
+.ui-widget-content {
+	border: 0;
+	background: #fbfbfb;
+}
+
+
+table.ui-datepicker-calendar {
+	thead {
+		background: #f8f8f8;
+		border-bottom: 1px solid #fff;
+	}
+	tbody {
+		background: #fbfbfb;
+	}
+	.ui-state-default,
+	.ui-widget-content .ui-state-default,
+	.ui-widget-header .ui-state-default {
+		border: 0px solid #FFF;
+		background: none;
+		font-weight: 400;
+	}
+	.ui-state-default {
+		color: #000;
+	}
+	a.ui-state-default {
+		color: #000;
+	}
+	td.ui-datepicker-today {
+		background: $red !important;
+		a {
+			color: #FFF;
+		}
+	}
+	td.ui-datepicker-current-day {
+		background: #007db1;
+		a {
+			color: #FFF;
+		}
+	}
+}
+
+/* Calendar Previous */
+.ui-datepicker-prev {
+	border: 0 !important;
+	@include rounded(0);
+	background: url("img/calendar-prev.png") no-repeat center center;
+	cursor: pointer;
+	.ui-icon {
+		display: none !important;
+	}
+}
+.ui-datepicker-prev-hover {
+	background: url("img/calendar-prev.png") no-repeat 2px 1px !important;
+	border: 0 !important;
+}
+
+/* Calendar Next */
+.ui-datepicker-next {
+	border: 0 !important;
+	@include rounded(0);
+	background: url("img/calendar-next.png") no-repeat center center;
+	cursor: pointer;
+	.ui-icon {
+		display: none !important;
+	}
+}
+.ui-datepicker-next-hover {
+	background: url("img/calendar-next.png") no-repeat -1px 1px !important;
+	border: 0 !important;
+}

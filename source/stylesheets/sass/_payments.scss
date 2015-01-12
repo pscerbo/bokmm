@@ -1,0 +1,56 @@
+/**
+ * Payments (_payments.scss)
+ */
+
+.paymentWrap {
+	width: 100%;
+	@include cf;
+	@include rounded(0 0 10px 10px);
+	padding: 20px;
+	display: none;
+	background: #f8f8f8;
+	border-top: 1px solid $borderColor;
+	.wrap {
+		background: #FFF;
+		@include cf;
+		padding: 0px 25px 10px 25px;
+		border: 1px solid $borderColor;
+		@include rounded(10px);
+		table.transactions {
+			border-top: 0;
+			td {
+				border: 0;
+				font-size: 12px;
+				&:first-child {
+					text-transform: uppercase;
+					max-width: none;
+				}
+				.recurring {
+					background: url("img/icon-recurring.png") no-repeat 0 2px;
+					display: inline-block;
+				}
+				a {
+					font-weight: 600;
+				}
+				@media screen and (max-width: 767px) {
+					&.hiddenMobile {
+						display: none;
+					}
+				}
+			}
+			tr {
+				td {
+					border-top: 1px solid $borderColor;
+				}
+				&:first-child {
+					td {
+						border-top: 0;
+					}
+				}
+			}
+		}
+		@media screen and (max-width: 480px) {
+			padding: 0 10px 10px 10px;
+		}
+	}
+}

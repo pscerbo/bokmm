@@ -1,0 +1,83 @@
+/**
+ * Form Steps (_steps.scss)
+ */
+
+.stepsWrap {
+	width: 100%;
+	@include cf;
+	margin-bottom: 20px;
+	display: table;
+	overflow: hidden;
+	ul {
+		@include listReset;
+		width: 100%;
+		display: table-row;
+		li {
+			font-size: 15px;
+			display: table-cell;
+			background: #cbcbcb;
+			height: 40px;
+			vertical-align: middle;
+			text-align: center;
+			width: 25%;
+			padding: 0 15px;
+			position: relative;
+			color: #949494;
+			span {
+				width: 15px;
+				height: 41px;
+				overflow: hidden;
+				position: absolute;
+				right: -13px;
+				top: 0;
+				z-index: 12;
+				&:before {
+					content: "";
+					width: 90px;
+					height: 90px;
+					border-top: 2px solid #FFF;
+					background: #cbcbcb;
+					position: absolute;
+					left: -92px;
+					top: -48px;
+					@include rotate(66);
+				}
+				&:after {
+					content: "";
+					width: 90px;
+					height: 90px;
+					border-right: 2px solid #FFF;
+					background: #cbcbcb;
+					position: absolute;
+					left: -93px;
+					top: -4px;
+					@include rotate(26);
+				}
+			}
+			&.activeTask {
+				background: $darkRed;
+				color: #FFF;
+				span {
+					&:before, &:after {
+						background: $darkRed;
+					}
+				}
+			}
+			&.completedTask {
+				background: $red;
+				color: #FFF;
+				span {
+					&:before, &:after {
+						background: $red;
+					}
+				}
+			}
+			@media screen and (max-width: 640px) {
+				font-size: 12px;
+			}
+			@media screen and (min-width: 641px) and (max-width: 767px) {
+				font-size: 14px;
+			}
+		}
+	}
+}

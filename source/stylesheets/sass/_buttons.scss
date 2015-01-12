@@ -1,0 +1,16 @@
+/**
+ * Buttons (_buttons.scss)
+ */
+
+a.btn {
+	@include rounded(10px);
+	font-size: 14px;
+	line-height: 14px;
+	padding: 10px 17px;
+	text-decoration: none;
+	text-align: center;
+	&.blue {
+		background: $btnBlue;
+		color: #FFF;
+	}
+}

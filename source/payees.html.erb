@@ -1,0 +1,1132 @@
+<!-- Content Area -->
+<div class="main push" role="main">
+    <div class="container">
+
+        <h1>
+            Payees
+            <span class="toggle"><a href="">View Payments</a></span>
+        </h1>
+
+        <div class="btnWrap">
+            <input type="checkbox" id="showHidden">
+            <label for="showHidden">Display Hidden Payees</label>
+            <a href="" class="btn blue">Add a Payee</a>
+        </div>
+
+        <!-- Payee Options -->
+        <div class="payeeOption">
+            <!-- Sort -->
+            <div class="sort">
+                <label>Sort By:</label>
+                <div class="selectWrap">
+                    <select class="select-style">
+                        <option>Recently Active</option>
+                        <option>Most Frequently Used</option>
+                        <option>Name</option>
+                        <option>Date Added</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Search -->
+            <div class="search">
+                <label>Search:</label>
+                <input type="text" placeholder="Payee Name" id="payeeSearch"/>
+                <div class="clearInput"></div>
+            </div>
+        </div>
+        <!-- /Payee Options -->
+
+        <!-- Flash Message -->
+        <div class="flashMessage payeeFlash">
+            You have searched for specific payments. <a href="#" class="viewAllPayments">View all payments</a>
+        </div>
+        <!-- /Flash Message -->
+
+        <!-- Payee Panel -->
+        <div class="panel payee">
+            <div class="wrap">
+                <!-- Payee Name -->
+                <div class="payeeName">
+                    <h2>
+                        <a href="#">Nissan Motor Acceptance Corp</a>
+                    </h2>
+                    <a href="#" class="showHide">Hide</a>
+                </div>
+                <!-- Recent Payments -->
+                <div class="recentPayment">
+                    <h4>Most Recent:</h4>
+                    <div class="table">
+                        <div class="row">
+                            <div class="cell">
+                                <span class="date recurring">Scheduled 12/09/2014</span>
+                            </div>
+                            <div class="cell amount">$2,100.00</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell date">Paid 11/02/2014</div>
+                            <div class="cell amount">$1,000.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Payment History -->
+                <div class="payHistory">
+                    <div class="singleTab"><a href="#">Payment History</a></div>
+                </div>
+                <!-- Payment Amount -->
+                <div class="payAmount">
+                    <h4>Pay:</h4>
+                    <div class="paywrap">
+                        <span>$</span>
+                        <input type="text" class="amt">
+                        <div class="clearVal">Clear</div>
+                    </div>
+                </div>
+
+                <div class="cleaner"></div>
+
+                <!-- History Tab Content -->
+                <div class="singleTabContent">
+                    <h2>Last 5 Payments:</h2>
+                    <a href="" class="btn blue floatRight">See All Payments</a>
+                    <table class="transactions">
+                        <tr>
+                            <td><span class="recurring">Scheduled 12/02/2014</span></td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View/Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Scheduled 12/02/2014</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View/Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pending</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Failed 11/02/2014</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pending</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- /History Tab Content -->
+                <div class="hiddenMessage">
+                    This Payee is Hidden
+                </div>
+            </div>
+
+            <!-- Hidden Panel -->
+            <div class="paymentDetails">
+                <!-- From Account -->
+                <div class="detailCol fromAccount">
+                    <label>
+                        From Account:
+                    </label>
+                    <div class="selectWrap">
+                        <select class="select-style">
+                            <option>Checking for Cash (...1234)</option>
+                            <option>Everyday Expenses and Bill (...1234)</option>
+                            <option>CDs Account (...1234)</option>
+                            <option>My Secret Savings (...1234)</option>
+                            <option>Another Secret Savings (...1234)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="detailCol sentOn">
+                    <label>Send On:</label>
+                    <input type="text" readonly="true" class="datepicker">
+                    <div class="calendar-popup">
+                        <div class="calendarPage"></div>
+                        <div class="paymentNote">
+                            This payment will sent electronically, takes 3 business days. If payment is made after 5:00pm MST, payment will start to process the next day.
+                        </div>
+                    </div>
+                </div>
+                <div class="detailCol recurringPaymentPicker">
+                    <div class="rpHandle">
+                        <a href="">Recurring Payment</a>
+                    </div>
+                </div>
+                <!-- Recurring Payment Panel -->
+                <div class="recurringPaymentPanel">
+                    <div class="innerWrap">
+
+                        <div class="col frequency">
+                            <label>Frequency: </label>
+                            <div class="selectWrap">
+                                <select class="select-style">
+                                    <option></option>
+                                    <option>Weekly</option>
+                                    <option>Every Two Weeks</option>
+                                    <option>Twice a Month</option>
+                                    <option>Every Four Weeks</option>
+                                    <option selected>Monthly</option>
+                                    <option>Every Two Months</option>
+                                    <option>Quarterly</option>
+                                    <option>Every Six Months</option>
+                                    <option>Once a Year</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col numOfPayments">
+                            <label>Number of Payments:</label>
+                            <input type="text" pattern="[0-9]*" class="setNumPayments">
+                            <div class="break"></div>
+                            <input type="checkbox" id="unlimited01" class="rpCheck">
+                            <label for="unlimited01">Unlimited</label>
+                        </div>
+                        <div class="col saveRecurringPayment">
+                            <a href="" class="btn blue rpSave">Save</a>
+                        </div>
+                        <div class="col cancelRecurringPayment">
+                            <a href="#" class="rpCancel">Cancel Recurring</a>
+                        </div>
+
+                        <div class="notes recurring">
+                            When payment is scheduled on weekend or holiday, the payment occurs the next business day.
+                        </div>
+                    </div>
+                </div>
+                <!-- /Recurring Payment Panel -->
+                <div class="detailCol memo">
+                    <input type="text" placeholder="Memo">
+                </div>
+
+                <div class="notes">
+                    This payment will send electronically, takes 2 business days.
+                </div>
+            </div>
+            <!-- /Hidden Panel -->
+        </div>
+
+        <div class="panel payee">
+            <div class="wrap">
+                <!-- Payee Name -->
+                <div class="payeeName">
+                    <h2>
+                        <a href="">Oklahoma Electric Cooperative</a>
+                    </h2>
+                    <a href="#" class="showHide">Hide</a>
+                </div>
+                <!-- Recent Payments -->
+                <div class="recentPayment">
+                    <h4>Most Recent:</h4>
+                    <div class="table">
+                        <div class="row">
+                            <div class="cell">
+                                <span class="date recurring">Scheduled 12/09/2014</span>
+                            </div>
+                            <div class="cell amount">$2,100.00</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell date">Paid 11/02/2014</div>
+                            <div class="cell amount">$1,000.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Payment History -->
+                <div class="payHistory">
+                    <div class="singleTab"><a href="#">Payment History</a></div>
+                </div>
+                <!-- Payment Amount -->
+                <div class="payAmount">
+                    <h4>Pay:</h4>
+                    <div class="paywrap">
+                        <span>$</span>
+                        <input type="text" class="amt">
+                        <div class="clearVal">Clear</div>
+                    </div>
+                </div>
+                <div class="cleaner"></div>
+
+                <!-- History Tab Content -->
+                <div class="singleTabContent">
+                    <h2>Last 5 Payments:</h2>
+                    <a href="" class="btn blue floatRight">See All Payments</a>
+                    <table class="transactions">
+                        <tr>
+                            <td>Scheduled 12/02/2014</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View/Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Scheduled 12/02/2014</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View/Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pending</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Failed 11/02/2014</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pending</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- /History Tab Content -->
+                <div class="hiddenMessage">
+                    This Payee is Hidden
+                </div>
+            </div>
+
+            <!-- Hidden Panel -->
+            <div class="paymentDetails">
+                <!-- From Account -->
+                <div class="detailCol fromAccount">
+                    <label>
+                        From Account:
+                    </label>
+                    <div class="selectWrap">
+                        <select class="select-style">
+                            <option>Checking for Cash (...1234)</option>
+                            <option>Everyday Expenses and Bill (...1234)</option>
+                            <option>CDs Account (...1234)</option>
+                            <option>My Secret Savings (...1234)</option>
+                            <option>Another Secret Savings (...1234)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="detailCol sentOn">
+                    <label>Send On:</label>
+                    <input type="text" readonly="true" class="datepicker">
+                    <div class="calendar-popup">
+                        <div class="calendarPage"></div>
+                        <div class="paymentNote">
+                            This payment will sent electronically, takes 3 business days. If payment is made after 5:00pm MST, payment will start to process the next day.
+                        </div>
+                    </div>
+                </div>
+                <div class="detailCol recurringPaymentPicker">
+                    <div class="rpHandle">
+                        <a href="">Recurring Payment</a>
+                    </div>
+                </div>
+                <!-- Recurring Payment Panel -->
+                <div class="recurringPaymentPanel">
+                    <div class="innerWrap">
+
+                        <div class="col frequency">
+                            <label>Frequency: </label>
+                            <div class="selectWrap">
+                                <select class="select-style">
+                                    <option></option>
+                                    <option>Weekly</option>
+                                    <option>Every Two Weeks</option>
+                                    <option>Twice a Month</option>
+                                    <option>Every Four Weeks</option>
+                                    <option selected>Monthly</option>
+                                    <option>Every Two Months</option>
+                                    <option>Quarterly</option>
+                                    <option>Every Six Months</option>
+                                    <option>Once a Year</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col numOfPayments">
+                            <label>Number of Payments:</label>
+                            <input type="text" pattern="[0-9]*" class="setNumPayments">
+                            <div class="break"></div>
+                            <input type="checkbox" id="unlimited02" class="rpCheck">
+                            <label for="unlimited02">Unlimited</label>
+                        </div>
+                        <div class="col saveRecurringPayment">
+                            <a href="" class="btn blue rpSave">Save</a>
+                        </div>
+                        <div class="col cancelRecurringPayment">
+                            <a href="#" class="rpCancel">Cancel Recurring</a>
+                        </div>
+
+                        <div class="notes recurring">
+                            When payment is scheduled on weekend or holiday, the payment occurs the next business day.
+                        </div>
+                    </div>
+                </div>
+                <!-- /Recurring Payment Panel -->
+                <div class="detailCol memo">
+                    <input type="text" placeholder="Memo">
+                </div>
+
+                <div class="notes">
+                    This payment will send electronically, takes 2 business days.
+                </div>
+            </div>
+            <!-- /Hidden Panel -->
+        </div>
+
+        <!-- Hidden Payee -->
+        <div class="panel payee hiddenPayee">
+            <div class="wrap">
+                <!-- Payee Name -->
+                <div class="payeeName">
+                    <h2>
+                        <a href="">Amex Credit Card</a>
+                    </h2>
+                    <a href="#" class="showHide">Show</a>
+                </div>
+                <!-- Recent Payments -->
+                <div class="recentPayment">
+                    <h4>Most Recent:</h4>
+                    <div class="table">
+                        <div class="row">
+                            <div class="cell">
+                                <span class="date recurring">Scheduled 12/09/2014</span>
+                            </div>
+                            <div class="cell amount">$2,100.00</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell date">Paid 11/02/2014</div>
+                            <div class="cell amount">$1,000.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Payment History -->
+                <div class="payHistory">
+                    <div class="singleTab"><a href="#">Payment History</a></div>
+                </div>
+                <!-- Payment Amount -->
+                <div class="payAmount">
+                    <h4>Pay:</h4>
+                    <div class="paywrap">
+                        <span>$</span>
+                        <input type="text" class="amt">
+                        <div class="clearVal">Clear</div>
+                    </div>
+                </div>
+                <div class="cleaner"></div>
+
+                <!-- History Tab Content -->
+                <div class="singleTabContent">
+                    <h2>Last 5 Payments:</h2>
+                    <a href="" class="btn blue floatRight">See All Payments</a>
+                    <table class="transactions">
+                        <tr>
+                            <td>Scheduled 12/02/2014</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View/Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Scheduled 12/02/2014</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View/Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pending</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Failed 11/02/2014</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pending</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- /History Tab Content -->
+                <div class="hiddenMessage">
+                    This Payee is Hidden
+                </div>
+            </div>
+
+            <!-- Hidden Panel -->
+            <div class="paymentDetails">
+                <!-- From Account -->
+                <div class="detailCol fromAccount">
+                    <label>
+                        From Account:
+                    </label>
+                    <div class="selectWrap">
+                        <select class="select-style">
+                            <option>Checking for Cash (...1234)</option>
+                            <option>Everyday Expenses and Bill (...1234)</option>
+                            <option>CDs Account (...1234)</option>
+                            <option>My Secret Savings (...1234)</option>
+                            <option>Another Secret Savings (...1234)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="detailCol sentOn">
+                    <label>Send On:</label>
+                    <input type="text" readonly="true" class="datepicker">
+                    <div class="calendar-popup">
+                        <div class="calendarPage"></div>
+                        <div class="paymentNote">
+                            This payment will sent electronically, takes 3 business days. If payment is made after 5:00pm MST, payment will start to process the next day.
+                        </div>
+                    </div>
+                </div>
+                <div class="detailCol recurringPaymentPicker">
+                    <div class="rpHandle">
+                        <a href="">Recurring Payment</a>
+                    </div>
+                </div>
+                <!-- Recurring Payment Panel -->
+                <div class="recurringPaymentPanel">
+                    <div class="innerWrap">
+
+                        <div class="col frequency">
+                            <label>Frequency: </label>
+                            <div class="selectWrap">
+                                <select class="select-style">
+                                    <option></option>
+                                    <option>Weekly</option>
+                                    <option>Every Two Weeks</option>
+                                    <option>Twice a Month</option>
+                                    <option>Every Four Weeks</option>
+                                    <option selected>Monthly</option>
+                                    <option>Every Two Months</option>
+                                    <option>Quarterly</option>
+                                    <option>Every Six Months</option>
+                                    <option>Once a Year</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col numOfPayments">
+                            <label>Number of Payments:</label>
+                            <input type="text" pattern="[0-9]*" class="setNumPayments">
+                            <div class="break"></div>
+                            <input type="checkbox" id="unlimited03" class="rpCheck">
+                            <label for="unlimited03">Unlimited</label>
+                        </div>
+                        <div class="col saveRecurringPayment">
+                            <a href="" class="btn blue rpSave">Save</a>
+                        </div>
+                        <div class="col cancelRecurringPayment">
+                            <a href="#" class="rpCancel">Cancel Recurring</a>
+                        </div>
+
+                        <div class="notes recurring">
+                            When payment is scheduled on weekend or holiday, the payment occurs the next business day.
+                        </div>
+                    </div>
+                </div>
+                <!-- /Recurring Payment Panel -->
+                <div class="detailCol memo">
+                    <input type="text" placeholder="Memo">
+                </div>
+
+                <div class="notes">
+                    This payment will send electronically, takes 2 business days.
+                </div>
+            </div>
+            <!-- /Hidden Panel -->
+        </div>
+        <!-- /Hidden Payee -->
+
+        <div class="panel payee">
+            <div class="wrap">
+                <!-- Payee Name -->
+                <div class="payeeName">
+                    <h2>
+                        <a href="">Verizon Wireless</a>
+                    </h2>
+                    <a href="#" class="showHide">Hide</a>
+                </div>
+                <!-- Recent Payments -->
+                <div class="recentPayment">
+                    <h4>Most Recent:</h4>
+                    <div class="table">
+                        <div class="row">
+                            <div class="cell">
+                                <span class="date recurring">Scheduled 12/09/2014</span>
+                            </div>
+                            <div class="cell amount">$2,100.00</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell date">Paid 11/02/2014</div>
+                            <div class="cell amount">$1,000.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Payment History -->
+                <div class="payHistory">
+                    <div class="singleTab"><a href="#">Payment History</a></div>
+                </div>
+                <!-- Payment Amount -->
+                <div class="payAmount">
+                    <h4>Pay:</h4>
+                    <div class="paywrap">
+                        <span>$</span>
+                        <input type="text" class="amt">
+                        <div class="clearVal">Clear</div>
+                    </div>
+                </div>
+                <div class="cleaner"></div>
+
+                <!-- History Tab Content -->
+                <div class="singleTabContent">
+                    <h2>Last 5 Payments:</h2>
+                    <a href="" class="btn blue floatRight">See All Payments</a>
+                    <table class="transactions">
+                        <tr>
+                            <td>Scheduled 12/02/2014</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View/Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Scheduled 12/02/2014</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View/Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pending</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Failed 11/02/2014</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pending</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- /History Tab Content -->
+            </div>
+
+            <!-- Hidden Panel -->
+            <div class="paymentDetails">
+                <!-- From Account -->
+                <div class="detailCol fromAccount">
+                    <label>
+                        From Account:
+                    </label>
+                    <div class="selectWrap">
+                        <select class="select-style">
+                            <option>Checking for Cash (...1234)</option>
+                            <option>Everyday Expenses and Bill (...1234)</option>
+                            <option>CDs Account (...1234)</option>
+                            <option>My Secret Savings (...1234)</option>
+                            <option>Another Secret Savings (...1234)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="detailCol sentOn">
+                    <label>Send On:</label>
+                    <input type="text" readonly="true" class="datepicker">
+                    <div class="calendar-popup">
+                        <div class="calendarPage"></div>
+                        <div class="paymentNote">
+                            This payment will sent electronically, takes 3 business days. If payment is made after 5:00pm MST, payment will start to process the next day.
+                        </div>
+                    </div>
+                </div>
+                <div class="detailCol recurringPaymentPicker">
+                    <div class="rpHandle">
+                        <a href="">Recurring Payment</a>
+                    </div>
+                </div>
+                <!-- Recurring Payment Panel -->
+                <div class="recurringPaymentPanel">
+                    <div class="innerWrap">
+
+                        <div class="col frequency">
+                            <label>Frequency: </label>
+                            <div class="selectWrap">
+                                <select class="select-style">
+                                    <option></option>
+                                    <option>Weekly</option>
+                                    <option>Every Two Weeks</option>
+                                    <option>Twice a Month</option>
+                                    <option>Every Four Weeks</option>
+                                    <option selected>Monthly</option>
+                                    <option>Every Two Months</option>
+                                    <option>Quarterly</option>
+                                    <option>Every Six Months</option>
+                                    <option>Once a Year</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col numOfPayments">
+                            <label>Number of Payments:</label>
+                            <input type="text" pattern="[0-9]*" class="setNumPayments">
+                            <div class="break"></div>
+                            <input type="checkbox" id="unlimited04" class="rpCheck">
+                            <label for="unlimited04">Unlimited</label>
+                        </div>
+                        <div class="col saveRecurringPayment">
+                            <a href="" class="btn blue rpSave">Save</a>
+                        </div>
+                        <div class="col cancelRecurringPayment">
+                            <a href="#" class="rpCancel">Cancel Recurring</a>
+                        </div>
+
+                        <div class="notes recurring">
+                            When payment is scheduled on weekend or holiday, the payment occurs the next business day.
+                        </div>
+                    </div>
+                </div>
+                <!-- /Recurring Payment Panel -->
+                <div class="detailCol memo">
+                    <input type="text" placeholder="Memo">
+                </div>
+
+                <div class="notes">
+                    This payment will send electronically, takes 2 business days.
+                </div>
+            </div>
+            <!-- /Hidden Panel -->
+        </div>
+
+        <div class="panel payee">
+            <div class="wrap">
+                <!-- Payee Name -->
+                <div class="payeeName">
+                    <h2>
+                        <a href="">Atlink Services</a>
+                    </h2>
+                    <a href="#" class="showHide">Hide</a>
+                </div>
+                <!-- Recent Payments -->
+                <div class="recentPayment">
+                    <h4>Most Recent:</h4>
+                    <div class="table">
+                        <div class="row">
+                            <div class="cell">
+                                <span class="date recurring">Scheduled 12/09/2014</span>
+                            </div>
+                            <div class="cell amount">$2,100.00</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell date">Paid 11/02/2014</div>
+                            <div class="cell amount">$1,000.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Payment History -->
+                <div class="payHistory">
+                    <div class="singleTab"><a href="#">Payment History</a></div>
+                </div>
+                <!-- Payment Amount -->
+                <div class="payAmount">
+                    <h4>Pay:</h4>
+                    <div class="paywrap">
+                        <span>$</span>
+                        <input type="text" class="amt">
+                        <div class="clearVal">Clear</div>
+                    </div>
+                </div>
+                <div class="cleaner"></div>
+
+                <!-- History Tab Content -->
+                <div class="singleTabContent">
+                    <h2>Last 5 Payments:</h2>
+                    <a href="" class="btn blue floatRight">See All Payments</a>
+                    <table class="transactions">
+                        <tr>
+                            <td>Scheduled 12/02/2014</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View/Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Scheduled 12/02/2014</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View/Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pending</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Failed 11/02/2014</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pending</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- /History Tab Content -->
+            </div>
+
+            <!-- Hidden Panel -->
+            <div class="paymentDetails">
+                <!-- From Account -->
+                <div class="detailCol fromAccount">
+                    <label>
+                        From Account:
+                    </label>
+                    <div class="selectWrap">
+                        <select class="select-style">
+                            <option>Checking for Cash (...1234)</option>
+                            <option>Everyday Expenses and Bill (...1234)</option>
+                            <option>CDs Account (...1234)</option>
+                            <option>My Secret Savings (...1234)</option>
+                            <option>Another Secret Savings (...1234)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="detailCol sentOn">
+                    <label>Send On:</label>
+                    <input type="text" readonly="true" class="datepicker">
+                    <div class="calendar-popup">
+                        <div class="calendarPage"></div>
+                        <div class="paymentNote">
+                            This payment will sent electronically, takes 3 business days. If payment is made after 5:00pm MST, payment will start to process the next day.
+                        </div>
+                    </div>
+                </div>
+                <div class="detailCol recurringPaymentPicker">
+                    <div class="rpHandle">
+                        <a href="">Recurring Payment</a>
+                    </div>
+                </div>
+                <!-- Recurring Payment Panel -->
+                <div class="recurringPaymentPanel">
+                    <div class="innerWrap">
+
+                        <div class="col frequency">
+                            <label>Frequency: </label>
+                            <div class="selectWrap">
+                                <select class="select-style">
+                                    <option></option>
+                                    <option>Weekly</option>
+                                    <option>Every Two Weeks</option>
+                                    <option>Twice a Month</option>
+                                    <option>Every Four Weeks</option>
+                                    <option selected>Monthly</option>
+                                    <option>Every Two Months</option>
+                                    <option>Quarterly</option>
+                                    <option>Every Six Months</option>
+                                    <option>Once a Year</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col numOfPayments">
+                            <label>Number of Payments:</label>
+                            <input type="text" pattern="[0-9]*" class="setNumPayments">
+                            <div class="break"></div>
+                            <input type="checkbox" id="unlimited05" class="rpCheck">
+                            <label for="unlimited05">Unlimited</label>
+                        </div>
+                        <div class="col saveRecurringPayment">
+                            <a href="" class="btn blue rpSave">Save</a>
+                        </div>
+                        <div class="col cancelRecurringPayment">
+                            <a href="#" class="rpCancel">Cancel Recurring</a>
+                        </div>
+
+                        <div class="notes recurring">
+                            When payment is scheduled on weekend or holiday, the payment occurs the next business day.
+                        </div>
+                    </div>
+                </div>
+                <!-- /Recurring Payment Panel -->
+                <div class="detailCol memo">
+                    <input type="text" placeholder="Memo">
+                </div>
+
+                <div class="notes">
+                    This payment will send electronically, takes 2 business days.
+                </div>
+            </div>
+            <!-- /Hidden Panel -->
+        </div>
+
+        <div class="panel payee">
+            <div class="wrap">
+                <!-- Payee Name -->
+                <div class="payeeName">
+                    <h2>
+                        <a href="">Abby Mathew Team - Keller Williams Realty Elite</a>
+                    </h2>
+                    <a href="#" class="showHide">Hide</a>
+                </div>
+                <!-- Recent Payments -->
+                <div class="recentPayment">
+                    <h4>Most Recent:</h4>
+                    <div class="table">
+                        <div class="row">
+                            <div class="cell">
+                                <span class="date recurring">Scheduled 12/09/2014</span>
+                            </div>
+                            <div class="cell amount">$2,100.00</div>
+                        </div>
+                        <div class="row">
+                            <div class="cell date">Paid 11/02/2014</div>
+                            <div class="cell amount">$1,000.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Payment History -->
+                <div class="payHistory">
+                    <div class="singleTab"><a href="#">Payment History</a></div>
+                </div>
+                <!-- Payment Amount -->
+                <div class="payAmount">
+                    <h4>Pay:</h4>
+                    <div class="paywrap">
+                        <span>$</span>
+                        <input type="text" class="amt">
+                        <div class="clearVal">Clear</div>
+                    </div>
+                </div>
+                <div class="cleaner"></div>
+
+                <!-- History Tab Content -->
+                <div class="singleTabContent">
+                    <h2>Last 5 Payments:</h2>
+                    <a href="" class="btn blue floatRight">See All Payments</a>
+                    <table class="transactions">
+                        <tr>
+                            <td>Scheduled 12/02/2014</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View/Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Scheduled 12/02/2014</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View/Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pending</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Failed 11/02/2014</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pending</td>
+                            <td>From: Everyday Expenses and Bill(...1234)</td>
+                            <td>$200,100.00</td>
+                            <td>
+                                <a href="">View</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- /History Tab Content -->
+            </div>
+
+            <!-- Hidden Panel -->
+            <div class="paymentDetails">
+                <!-- From Account -->
+                <div class="detailCol fromAccount">
+                    <label>
+                        From Account:
+                    </label>
+                    <div class="selectWrap">
+                        <select class="select-style">
+                            <option>Checking for Cash (...1234)</option>
+                            <option>Everyday Expenses and Bill (...1234)</option>
+                            <option>CDs Account (...1234)</option>
+                            <option>My Secret Savings (...1234)</option>
+                            <option>Another Secret Savings (...1234)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="detailCol sentOn">
+                    <label>Send On:</label>
+                    <input type="text" readonly="true" class="datepicker">
+                    <div class="calendar-popup">
+                        <div class="calendarPage"></div>
+                        <div class="paymentNote">
+                            This payment will sent electronically, takes 3 business days. If payment is made after 5:00pm MST, payment will start to process the next day.
+                        </div>
+                    </div>
+                </div>
+                <div class="detailCol recurringPaymentPicker">
+                    <div class="rpHandle">
+                        <a href="">Recurring Payment</a>
+                    </div>
+                </div>
+                <!-- Recurring Payment Panel -->
+                <div class="recurringPaymentPanel">
+                    <div class="innerWrap">
+
+                        <div class="col frequency">
+                            <label>Frequency: </label>
+                            <div class="selectWrap">
+                                <select class="select-style">
+                                    <option></option>
+                                    <option>Weekly</option>
+                                    <option>Every Two Weeks</option>
+                                    <option>Twice a Month</option>
+                                    <option>Every Four Weeks</option>
+                                    <option selected>Monthly</option>
+                                    <option>Every Two Months</option>
+                                    <option>Quarterly</option>
+                                    <option>Every Six Months</option>
+                                    <option>Once a Year</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col numOfPayments">
+                            <label>Number of Payments:</label>
+                            <input type="text" pattern="[0-9]*" class="setNumPayments">
+                            <div class="break"></div>
+                            <input type="checkbox" id="unlimited06" class="rpCheck">
+                            <label for="unlimited06">Unlimited</label>
+                        </div>
+                        <div class="col saveRecurringPayment">
+                            <a href="" class="btn blue rpSave">Save</a>
+                        </div>
+                        <div class="col cancelRecurringPayment">
+                            <a href="#" class="rpCancel">Cancel Recurring</a>
+                        </div>
+
+                        <div class="notes recurring">
+                            When payment is scheduled on weekend or holiday, the payment occurs the next business day.
+                        </div>
+                    </div>
+                </div>
+                <!-- /Recurring Payment Panel -->
+                <div class="detailCol memo">
+                    <input type="text" placeholder="Memo">
+                </div>
+
+                <div class="notes">
+                    This payment will send electronically, takes 2 business days.
+                </div>
+            </div>
+            <!-- /Hidden Panel -->
+        </div>
+        <!-- /Payee Panel -->
+
+        <!-- No Payee Found -->
+        <div class="noPayeeFound">
+            Sorry.  Your search did not match any payees.  Please try again.
+        </div>
+        <!-- /No Payee Found -->
+
+        <div class="paymentNote">* If payment is made after 5:00pm MST, payment will start to process the next day.</div>
+
+        <!-- Confirmation Box -->
+        <div id="confirmContainer">
+            <div id="confirmation">
+                <div class="inner">
+                    <div class="paymentsScheduled">
+                        <span id="numOfPayments">0</span> Payments are set for <span id="numOfPayees">0</span> payees
+                        <span class="recurring">2 of the payments are reoccurring.  You can modify or delete any future payments.</span>
+                    </div>
+                    <div class="total">
+                        Total: $<span id="sumTotal">0.00</span>
+                        <div class="cleaner"></div>
+                        <a href="review-payments.html" class="btn blue">Next: Review Payment(s)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Confirmation Box -->
+
+    </div>
+    <!-- /Container -->
+</div>
+<!-- /Content Area (Main) -->

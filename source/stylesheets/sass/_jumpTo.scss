@@ -1,0 +1,38 @@
+/**
+ * Jump To (_jumpTo.scss)
+ */
+
+.jumpTo {
+	float: right;
+	@include cf;
+	width: auto;
+	ul {
+		@include listReset;
+		margin-top: -45px;
+		display: block;
+		li {
+			font-size: 12px;
+			line-height: 12px;
+			display: inline-block;
+			a {
+				display: block;
+				font-weight: bold;
+				border-right: 1px solid #b6b7b8;
+				padding: 0 9px 0 5px;
+			}
+			&:last-child {
+				a {
+					border-right: 0;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 767px) {
+		float: left;
+		margin-bottom: 30px;
+		ul {
+			margin-top: -10px;
+		}
+	}
+}

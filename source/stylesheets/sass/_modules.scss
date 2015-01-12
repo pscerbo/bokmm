@@ -1,0 +1,931 @@
+/**
+ * Modules (_modules.scss)
+ */
+
+.main {
+	background: #eaeaeb;
+	padding: 50px 0;
+	min-height: 500px;
+	margin-top: 118px;
+	position: relative;
+	.container {
+
+		.back {
+			clear: both;
+			@include cf;
+			float: left;
+			display: block;
+			width: 100%;
+			margin-bottom: 35px;
+			margin-top: -20px;
+			a.btn {
+				clear: both;
+				padding: 12px 40px;
+				background: url("img/back-arrow.png") no-repeat 25px 14px $btnBlue;
+			}
+		}
+
+		ul.accountList {
+			@include cf;
+			@include listReset;
+			margin-bottom: 20px;
+			li {
+				display: inline-block;
+				margin-right: percentage(135px/960px);
+				font-size: 18px;
+				font-weight: 300;
+				color: #000;
+				strong {
+					font-weight: 700;
+					padding-right: 12px;
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+			@media screen and (max-width: 767px) {
+				li {
+					clear: both;
+					margin-bottom: 20px;
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				li {
+					width: auto;
+					strong {
+						display: block;
+					}
+				}
+			}
+		}
+
+	}
+	&.loggedOut {
+		margin-top: 78px;
+	}
+
+	/* Panels */
+	.panel {
+		width: 100%;
+		border: 1px solid $borderColor;
+		@include rounded(10px);
+		background: #FFF;
+		overflow: hidden;
+		margin-bottom: 45px;
+		@include cf;
+
+		/* Account Overview */
+		.accountOverview, .accountDetails {
+			padding: 25px 20px;
+			background: #FFF;
+			width: 100%;
+			@include cf;
+
+			/* Account Status */
+			.acctStatus {
+				float: right;
+				padding-left: 20px;
+				display: inline-block;
+				text-align: right;
+				.status {
+					display: inline-block;
+					padding-left: 10px;
+					label {
+						float: left;
+						font-size: 14px;
+						margin-top: 10px;
+						margin-right: 8px;
+					}
+					.selectWrap {
+						display: table-cell;
+						width: 140px;
+					}
+				}
+				.history {
+					display: inline-block;
+					padding-left: 10px;
+					label {
+						float: left;
+						font-size: 14px;
+						margin-top: 10px;
+						margin-right: 8px;
+					}
+					.selectWrap {
+						display: table-cell;
+						width: 140px;
+					}
+				}
+
+				@media screen and (max-width: 739px) {
+					clear: both;
+					float: left;
+					text-align: left;
+					padding-left: 0;
+					margin-top: 30px;
+					.status {
+						padding-left: 0;
+						.selectWrap {
+							width: 150px;
+						}
+					}
+				}
+
+			}
+
+			/* Slider Controls */
+			.sliderControls {
+				width: 100%;
+				float: left;
+				min-height: 44px;
+				float: left;
+				cursor: pointer;
+				background: url("img/icons-accordionControls-plus.png") no-repeat 0px 0px;
+				//margin-bottom: 49px;
+				&.active {
+					background: url("img/icons-accordionControls-minus.png") no-repeat 0px 0px;
+				}
+				&.fullWidth {
+
+				}
+				h2 {
+					margin-left: 60px !important;
+				}
+
+				@media screen and (min-width: 481px) and (max-width: 640px) {
+				//margin-bottom: 50px;
+				}
+				@media screen and (min-width: 320px) and (max-width: 480px) {
+					margin-bottom: 0;
+				}
+			}
+
+			.acctTitle, .balance {
+				/* Alert */
+				.alert {
+					@include cf;
+					float: left;
+					width: percentage(300px/400px);
+					//text-align: right;
+					font-size: 14px;
+					display: inline-block;
+					vertical-align: middle;
+					background: none;
+					padding: 0;
+					margin-left: 60px;
+					margin-bottom: 0;
+					&:before {
+						vertical-align: middle;
+						margin-right: 8px;
+						content: "";
+						display: inline-block;
+						width: 20px;
+						height: 20px;
+						background: url("img/icon-alert.png") no-repeat;
+					}
+					span, a {
+						font-weight: bold;
+						font-size: 14px;
+					}
+				}
+			}
+
+			.acctTitle {
+				float: left;
+				width: percentage(350px/960px);
+				.alert {
+					margin-top: 49px;
+					margin-bottom: 0;
+				}
+				h2 {
+					float: left;
+					margin-top: 6px;
+					margin-left: percentage(20px/310px);
+					a {
+						color: $red;
+					}
+				}
+
+				@media screen and (min-width: 641px) and (max-width: 767px) {
+					width: 70%;
+				}
+				@media screen and (min-width: 481px) and (max-width: 640px) {
+					width: 50%;
+				}
+				@media screen and (min-width: 320px) and (max-width: 480px) {
+					float: none;
+					display: block;
+					width: 100%;
+					h2 {
+						margin-bottom: 10px;
+					}
+					.alert {
+						display: none;
+					}
+				}
+			}
+
+			.sectTitle {
+				float: left;
+				h2 {
+					float: left;
+					margin-top: 6px;
+					margin-left: percentage(20px/310px);
+				}
+
+				@media screen and (min-width: 641px) and (max-width: 767px) {
+					//width: 70%;
+					display: table-cell;
+				}
+				@media screen and (min-width: 481px) and (max-width: 640px) {
+					width: 80%;
+				}
+				@media screen and (min-width: 320px) and (max-width: 480px) {
+					float: none;
+					display: block;
+					width: 100%;
+					h2 {
+						margin-bottom: 10px;
+					}
+					.alert {
+						display: none;
+					}
+				}
+			}
+
+			.graph {
+				float: left;
+				text-align: right;
+				width: percentage(340px/960px);
+				margin-top: -15px;
+				min-height: 50px;
+				img {
+					max-width: 100%;
+				}
+				@media screen and (max-width: 767px) {
+					display: none;
+				}
+			}
+
+			.balance {
+				float: left;
+				text-align: right;
+				width: percentage(270px/960px);
+				span {
+					//display: block;
+					clear: both;
+					display: inline-block;
+					font-weight: bold;
+					font-size: 34px;
+					color: #000;
+					//margin-bottom: 45px;
+				}
+				.alert {
+					display: none;
+				}
+				.activitesTrigger {
+					font-size: 15px;
+					color: #007db1;
+					font-weight: 500;
+					padding: 20px 20px 20px 15px;
+					display: inline-block;
+					margin: 25px 0 0 0;
+					cursor: pointer;
+					@include rounded( 10px 10px 0 0 );
+					&:after {
+						content: "";
+						width: 13px;
+						height: 7px;
+						background: url("img/up-down-arrows-blue.png") 0 -7px no-repeat;
+						display: inline-block;
+						margin-left: 10px;
+					}
+					&.open {
+						background: #ddddde;
+						&:after {
+							background: url("img/up-down-arrows-blue.png") 0 0px no-repeat;
+						}
+					}
+					@media screen and (max-width: 480px) {
+						float: right;
+						margin-top: -10px;
+					}
+				}
+				@media screen and (min-width: 641px) and (max-width: 767px) {
+					width: 30%;
+				}
+				@media screen and (min-width: 481px) and (max-width: 640px) {
+					width: 50%;
+				}
+				@media screen and (min-width: 320px) and (max-width: 480px) {
+					width: 100%;
+					text-align: left;
+					padding-left: 58px;
+					span {
+						margin-bottom: 17px;
+					}
+					.alert {
+						display: block;
+						width: 100%;
+						margin-left: 0;
+						float: left;
+						margin-bottom: 10px;
+					}
+					a.activitesTrigger {
+						margin-top: 0px;
+					}
+				}
+
+			}
+
+			/* Activities Slider */
+			.activitiesContent {
+				cler: both;
+				@include cf;
+				float: left;
+				width: 100%;
+				@include rounded(10px 0 10px 10px);
+				//padding: 20px;
+				background: #f0f0f1;
+				overflow: hidden;
+				.col {
+					float: left;
+					&.summary {
+						width: 50%;
+						border-right: 1px solid #FFF;
+						//position: relative;
+						.content {
+							width: 100%;
+							padding: 12px 15px;
+							//min-height: 155px;
+							height: 155px; //FF required a fixed height for some reason
+							float: left;
+							display: table;
+							position: relative;
+							/* Daily Balance Box */
+							.dailyBalanceBox {
+								position: absolute;
+								top: 12px;
+								left: 15px;
+								width: 150px;
+								height: 130px;
+								padding: 20px 5px;
+								background: #FFF;
+								@include rounded(10px);
+								text-align: center;
+								.title {
+									font-size: 14px;
+									font-weight: 400;
+									margin-top: -4px;
+								}
+								span {
+									font-weight: 700;
+									font-size: 28px;
+									display: block;
+								}
+								a {
+									font-weight: 600;
+									font-size: 12px;
+								}
+								@media screen and (min-width: 768px) and (max-width: 959px) {
+									width: 140px;
+								}
+								@media screen and (min-width: 481px) and (max-width: 767px) {
+									width: 150px;
+								}
+								@media screen and (max-width: 480px) {
+									position: relative;
+									top: 0;
+									left: 0;
+									clear: both;
+									margin: 0 auto;
+									width: 100%;
+									.title {
+										margin-bottom: 10px;
+									}
+								}
+							}
+							/* Balance Overview */
+							.balanceOverview {
+								float: left;
+								padding-left: 166px;
+								width: 100%;
+								display: table;
+								.tablerow {
+									display: table-row;
+									width: 100%;
+									max-width: 365px;
+									.tablecell {
+										display: table-cell;
+										padding-top: 10px;
+										padding-bottom: 0px;
+										vertical-align: middle;
+										&.type {
+											width: percentage(106px/365px);
+											font-size: 12px;
+											font-weight: 300;
+											padding-right: 10px;
+											text-align: right;
+										}
+										&.bar {
+											width: percentage(138px/365px);
+											padding-right: 12px;
+											.percentage {
+												width: 100%;
+												height: 25px;
+												@include rounded(10px);
+												&.green {
+													background: url("img/bg-green.png") repeat-x;
+												}
+												&.red {
+													background: url("img/bg-red.png") repeat-x;
+												}
+												&.blue {
+													background: url("img/bg-blue.png") repeat-x;
+												}
+											}
+										}
+										&.amount {
+											width: percentage(120px/365px);
+											padding-left: 20px;
+											font-weight: 700;
+											font-size: 16px;
+										}
+										@media screen and (max-width: 480px) {
+											&.bar {
+												display: none;
+											}
+											&.amount {
+												padding-left: 0;
+											}
+										}
+									}
+								}
+								@media screen and (max-width: 480px) {
+									padding-left: 0;
+									margin: 20px 0;
+								}
+							}
+						}
+					}
+					&.upcoming {
+						width: 50%;
+						.content {
+							width: 100%;
+							padding: 12px 15px;
+							.transOverview {
+								float: left;
+								width: 50%;
+								font-size: 14px;
+								font-weight: 400;
+								color: #007db1;
+								text-align: center;
+								margin-bottom: 25px;
+								span {
+									font-weight: 600;
+									font-size: 16px;
+								}
+								@media screen and (max-width: 480px) {
+									clear: both;
+									width: 100%;
+									margin-bottom: 15px;
+								}
+							}
+							.calendar {
+								float: left;
+								@include cf;
+								width: 100%;
+								height: 60px;
+								margin-bottom: 17px;
+								font-size: 0;
+								text-align: center;
+								overflow: hidden;
+								.scrollContainer {
+									overflow-y: scroll;
+									position: relative;
+									margin-right: -20px;
+									height: 90px;
+								}
+
+								.month {
+									display: inline-block;
+									width: 40px;
+									vertical-align: top;
+									text-align: right;
+									font-size: 12px;
+									font-weight: 300;
+									padding-right: 5px;
+								}
+								.days {
+									display: inline-block;
+									width: 530px;
+									text-align: left;
+									.day {
+										display: inline-block;
+										width: 41px;
+										height: 60px;
+										font-size: 12px;
+										font-weight: 300;
+										margin-right: percentage(8px/520px);
+										vertical-align: top;
+										text-align: center;
+										cursor: default;
+										position: relative;
+										span {
+											display: block;
+											padding-bottom: 3px;
+										}
+										.activity {
+											width: 41px;
+											height: 40px;
+											display: table-cell;
+											vertical-align: middle;
+											&:hover {
+												text-decoration: underline;
+											}
+											&.active {
+												background: url("img/calendar-active.png") no-repeat center center;
+												font-size: 20px;
+												font-weight: bold;
+												color: #007db1;
+												cursor: pointer;
+											}
+											&.disabled {
+												background: url("img/calendar-disabled.png") no-repeat center center;
+												font-size: 20px;
+												font-weight: bold;
+												color: #999999;
+												&:hover {
+													text-decoration: none;
+												}
+											}
+											&.none {
+												background: url("img/calendar-none.png") no-repeat center center;
+												font-size: 20px;
+												font-weight: bold;
+												color: #007db1;
+											}
+										}
+									}
+									a.all {
+										display: inline-block;
+										width: 60px;
+										height: 60px;
+										font-size: 12px;
+										font-weight: 600;
+										vertical-align: middle;
+										text-align: center;
+										padding-top: 30px;
+									}
+								}
+							}
+						}
+					}
+					.sectionTitle {
+						background: #ddddde;
+						font-size: 16px;
+						color: #000;
+						text-align: center;
+						padding: 15px 20px 17px 20px;
+						line-height: 16px;
+						position: relative;
+						span {
+							font-weight: 600;
+						}
+						@media screen and (max-width: 480px) {
+							line-height: 24px;
+						}
+						.tip {
+							width: 20px;
+							height: 20px;
+							background: url("img/icon-info.png") no-repeat;
+							cursor: pointer;
+							display: inline-block;
+							vertical-align: middle;
+							margin-right: 5px;
+							margin-top: -3px;
+							margin-bottom: -5px;
+							position: relative;
+						}
+						.tipContent {
+							text-align: left;
+							width: 250px;
+							color: #333;
+							font-size: 12px;
+							//position: absolute;
+							padding: 20px;
+							background: #FFF;
+							@include rounded(10px);
+							@include box-shadow(0px, 4px, 5px, rgba(0, 0, 0, 0.25));
+							cursor: default;
+							.closeTip {
+								position: absolute;
+								top: 8px;
+								right: 15px;
+								font-size: 14px;
+								cursor: pointer;
+							}
+						}
+					}
+
+					@media screen and (max-width: 899px) {
+						clear: both;
+						&.summary, &.upcoming {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+
+		/* Account Details */
+		.accountDetailsWrap {
+			display: none;
+		}
+		.accountDetails {
+			background: #f8f8f8;
+			border-top: 1px solid $borderColor;
+			.acctTitle {
+				h2 {
+					color: $headerBlue;
+					font-weight: bold;
+					margin-left: 0;
+					margin-bottom: 8px;
+				}
+				.subBalance {
+					margin-top: -10px;
+					margin-bottom: 20px;
+				}
+			}
+
+			.balance {
+				padding-left: 0;
+				margin-bottom: 0px;
+				span {
+					font-size: 28px;
+				}
+				@media screen and (min-width: 641px) {
+					margin-bottom: 45px;
+				}
+			}
+
+			/* Alerts */
+			.alert {
+				margin-top: 20px;
+				margin-bottom: 0;
+			}
+		}
+
+		/* Promo */
+		.promo {
+			@include cf;
+			width: 100%;
+			position: relative;
+			display: table;
+			.bgImage {
+				position: relative;
+				z-index: 20;
+				max-width: 100%;
+			}
+			.out {
+				position: absolute;
+				top: 0;
+				z-index: 50;
+				width: 100%;
+				height: 100%;
+				padding: 30px;
+				.in {
+					display: table;
+					height: 100%;
+					.promoText {
+						font-size: 30px;
+						display: table-cell;
+						vertical-align: middle;
+						p {
+							margin: 0;
+							padding: 0;
+						}
+					}
+				}
+			}
+
+			@media screen and (min-width: 481px) and (max-width: 676px) {
+				.out {
+					.in {
+						.promoText {
+							font-size: 20px;
+							p {
+								margin-bottom: 10px;
+							}
+						}
+					}
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				display: none;
+			}
+		}
+	}
+
+	/* Box Modules */
+	.boxModule {
+		@include cf;
+		@include rounded(10px);
+		border: 1px solid $borderColor;
+		width: 100%;
+		background: #FFF;
+		padding: 20px;
+		margin-bottom: 30px;
+		p {
+			font-size: 18px;
+			font-weight: 400;
+			color: #333;
+			margin: 0 0 18px 0;
+		}
+		.note {
+			font-size: 14px;
+			margin-top: -15px;
+			margin-bottom: 20px;
+		}
+
+		.alert {
+			margin-bottom: 50px;
+			.alertMsg {
+				line-height: 1.3em;
+				@media screen and (min-width: 320px) and (max-width: 767px) {
+					display: block !important;
+				}
+			}
+			@media screen and (min-width: 320px) and (max-width: 767px) {
+				margin-bottom: 20px;
+			}
+		}
+
+		/* Form Wrappers */
+		dl {
+			width: 100%;
+			dt {
+				clear: both;
+				margin: 0 0 10px 0;
+				padding: 0;
+				h3 {
+					color: #000;
+					font-weight: 400;
+					display: inline-block;
+					padding-top: 8px;
+					vertical-align: top;
+					margin-right: 10px;
+				}
+				a {
+					display: inline-block;
+					vertical-align: top;
+					padding-top: 15px;
+					font-size: 14px;
+				}
+				label {
+					font-size: 22px;
+					font-weight: 300;
+				}
+				.step {
+					width: 60px;
+					display: inline-block;
+					span {
+						display: block;
+						width: 44px;
+						height: 44px;
+						background: url("img/bg-step.png") no-repeat;
+						text-align: center;
+						line-height: 44px;
+						font-weight: 700;
+						font-size: 28px;
+						color: $red;
+					}
+				}
+
+				.select-style {
+					max-width: 480px;
+					margin-left: -4px;
+					display: inline-block;
+					vertical-align: middle;
+				}
+
+				@media screen and (max-width: 640px) {
+					margin-bottom: 15px;
+					.select-style {
+						clear: both;
+						margin-top: 15px;
+						display: block;
+						margin-left: 0;
+					}
+				}
+			}
+			dd {
+				clear: both;
+				margin: 0 0 20px 0;
+				padding: 0 0 0 60px;
+				input[type=text],
+				input[type=password] {
+					//margin-left: 60px;
+				}
+				input[type=submit]{
+					padding: 15px 50px;
+					//margin-left: 60px;
+					font-size: 16px;
+				}
+				a {
+					font-size: 14px;
+					font-weight: 700;
+					margin-left: 15px;
+				}
+				.error {
+					//margin: 10px 0 0 60px;
+					margin: 10px 0 0 0px;
+				}
+				@media screen and (max-width: 640px) {
+					input[type=text],
+					input[type=password],
+					input[type=submit],
+					.error {
+						margin-left: 0;
+					}
+				}
+			}
+
+			&.addPayee {
+				dt {
+					//border: 1px solid red;
+				}
+				dd {
+					padding-left: 0;
+					input {
+						margin-left: 0;
+					}
+				}
+			}
+			&.unordered {
+				dt {
+					padding-left: 60px;
+				}
+				@media screen and (max-width: 640px) {
+					dt, dd {
+						padding-left: 10px;
+						padding-right: 10px;
+					}
+				}
+			}
+		}
+
+		&.gray {
+			background: #f8f8f8;
+		}
+
+		.payeeVerification {
+			.edit {
+				font-size: 16px;
+			}
+		}
+
+		/* Payee Search Results Matches */
+		.response {
+			margin: 50px 0;
+			float: left;
+			width: 100%;
+			@include cf;
+			h2 {
+				margin-bottom: 20px;
+				font-size: 28px;
+			}
+			p {
+				margin: 0 0 25px 0;
+				font-size: 16px;
+			}
+			a.btn {
+				float: left;
+				clear: both;
+				padding: 20px 40px;
+			}
+			ul {
+				@include listReset;
+				margin-bottom: 20px;
+				float: left;
+				li {
+					a {
+						text-transform: uppercase;
+						font-size: 16px;
+						font-weight: 600;
+					}
+					p {
+						margin-top: 5px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+	}
+
+	@media screen and (max-width: 1024px) {
+		margin-top: 68px;
+	}
+}

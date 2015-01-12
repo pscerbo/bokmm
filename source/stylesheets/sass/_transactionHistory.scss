@@ -1,0 +1,637 @@
+/**
+ * Transaction History (_transactionHistory.scss)
+ */
+
+/* Search Options */
+.historySearch {
+	width: 100%;
+	@include cf;
+	margin-bottom: 20px;
+	//border-bottom: 1px solid red;
+	.col {
+		float: left;
+		width: 50%;
+		positive: relative;
+		&.viewAccounts {
+			//border: 1px solid red;
+			padding: 20px 0 12px 0;
+			letter-spacing: 0.03em;
+			overflow: hidden;
+			/* Trigger */
+			.accountsAvailableMenu {
+				font-size: 20px;
+				font-weight: 300;
+				cursor: pointer;
+				white-space: nowrap;
+				&:after {
+					content: "";
+					display: inline-block;
+					width: 13px;
+					height: 7px;
+					margin-left: 10px;
+					background: url("img/arrow-down-blue.png") no-repeat top left;
+				}
+				@media screen and (max-width: 480px) {
+					font-size: 16px;
+				}
+			}
+			/* Content */
+			.availableAccountsDropdown {
+				display: none;
+				background: $red;
+				margin-top: 10px;
+				margin-left: 48px;
+				width: 350px;
+				padding: 5px;
+				position: absolute !important;
+				@include rounded(0 0 10px 10px);
+				z-index:400;
+				.content {
+					width: 100%;
+					min-height: 50px;
+					padding: 10px 0;
+					@include rounded(10px);
+					background: #FFF;
+					h3 {
+						font-size: 16px;
+						font-weight: 600;
+						background: #eaeaeb;
+						padding: 10px;
+					}
+					ul {
+						@include listReset;
+						margin-bottom: 5px;
+						li {
+							width: 100%;
+							padding: 5px 10px;
+						}
+					}
+				}
+				@media screen and (max-width: 480px) {
+					margin-left: 48px;
+					width: 250px;
+					.content {
+						h3 {
+							font-size: 14px;
+						}
+						ul {
+							li {
+								a {
+									font-size: 12px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&.right {
+			text-align: right;
+			font-size: 0;
+			.optionButton {
+				font-size: 16px;
+				display: inline-block;
+				margin-left: 10px;
+				padding: 20px 17px;
+				@include rounded(10px 10px 0 0);
+				a {
+					outline: none;
+					text-decoration: none;
+					&:hover {
+						text-decoration: none;
+					}
+				}
+				&:after {
+					content: "";
+					display: inline-block;
+					width: 13px;		
+					height: 7px;
+					margin-left: 5px;
+					background: url("img/arrow-down-blue.png") no-repeat top left;
+				}
+				&.current {
+					background: #ddddde;
+					&:after {
+						background: url("img/arrow-up-blue.png") no-repeat top left;
+					}
+				}
+
+				@media screen and (max-width: 640px) {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 481px) and (max-width: 880px) {
+		.col {
+			width: 100%;
+			clear: both;
+			&.viewAccounts {
+				padding-left: 5px;
+			}
+			&.right {
+				text-align: left;
+				.optionButton {
+					margin-right: 10px;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 320px) and (max-width: 480px) {
+		.col {
+			width: 100%;
+			clear: both;
+			&.viewAccounts {
+				padding-left: 5px;
+			}
+			&.right {
+				text-align: left;
+				.optionButton {
+					margin-right: 0;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+}
+
+.historySearchOptions {
+	display: none;
+	background: #ddddde;
+	padding: 20px;
+	@include rounded(10px);
+	margin-bottom: 20px;
+	margin-top: -20px;
+	font-size: 0;
+	@include cf;
+	&#optionTwo {
+		background: #f0f0f1;
+		font-size: 16px;
+		padding: 0;
+		overflow: hidden;
+		@include rounded(10px 0 10px 10px);
+	}
+
+	.clear20 {
+		clear: both;
+		float: left;
+		display: block;
+		width: 100%;
+		height: 1%;
+	}
+
+	.break {
+		display: none;
+	}
+
+	.searchOne,
+	.searchTwo,
+	.searchThree,
+	.searchFour,
+	.searchFive,
+	.searchSix,
+	.searchSeven {
+		vertical-align: top;
+		font-size: 14px;
+		.innerWrap {
+			display: table;
+			.flex {
+				display: table-cell;
+				vertical-align: middle;
+				white-space: nowrap;
+			}
+		}
+	}
+
+	.searchOne {
+		display: inline-block;
+		width: percentage(380px/960px);
+		padding-right: percentage(40px/960px);
+		.innerWrap {
+			label {
+				display: table-cell;
+				vertical-align: top;
+				font-weight: 600;
+				padding-top: 10px;
+				padding-right: 5px;
+			}
+		}
+	}
+
+	.searchTwo {
+		display: inline-block;
+		width: percentage(370px/960px);
+		padding-right: percentage(40px/960px);
+		.innerWrap {
+			label {
+				display: table-cell;
+				vertical-align: top;
+				white-space: nowrap;
+				font-weight: 600;
+				padding-top: 10px;
+				padding-right: 5px;
+			}
+		}
+	}
+
+	.searchThree {
+		display: inline-block;
+		width: percentage(210px/960px);
+		.innerWrap {
+			label {
+				display: table-cell;
+				white-space: nowrap;
+				vertical-align: top;
+				font-weight: 600;
+				padding-top: 10px;
+				padding-right: 5px;
+			}
+		}
+	}
+
+	@media screen and (min-width: 320px) and (max-width: 700px) {
+		.break {
+			display: block;
+		}
+		.searchOne {
+			width: 100%;
+		}
+	}
+
+	@media screen and (min-width: 481px) and (max-width: 700px) {
+		.break {
+			display: block;
+		}
+		.searchTwo {
+			width: 60%;
+			margin-bottom: 20px;
+		}
+		.searchThree {
+			width: 40%;
+			margin-bottom: 20px;
+		}
+	}
+
+	@media screen and (min-width: 320px) and (max-width: 480px) {
+		.break {
+			display: none;
+		}
+		.searchOne {
+			width: 100%;
+		}
+		.searchTwo,
+		.searchThree {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+
+	.searchFour {
+		display: inline-block;
+		width: percentage(500px/960px);
+		padding-right: percentage(40px/960px);
+		.innerWrap {
+			.flex {
+				padding-right: 10px;
+				label {
+					white-space: nowrap;
+					font-weight: 600;
+					padding-top: 10px;
+					padding-right: 5px;
+				}
+				input[type=text] {
+					width: 100%;
+					font-size: 14px;
+					max-width: 170px;
+					padding-right: 5;
+				}
+				span.bold {
+					font-size: 28px;
+					font-weight: 600;
+				}
+				.clear {
+					font-weight: 600;
+				}
+			}
+
+
+			@media screen and (max-width: 510px) {
+				.break {
+					display: table-row;
+					height: 20px;
+				}
+				.flex.alignRight {
+					text-align: right;
+				}
+			}
+		}
+	}
+
+	.searchFive {
+		display: inline-block;
+		width: percentage(460px/960px);
+		.innerWrap {
+			float: right;
+			.flex {
+				padding-right: 10px;
+				label {
+					white-space: nowrap;
+					font-weight: 600;
+					padding-top: 10px;
+					padding-right: 5px;
+				}
+				input[type=text] {
+					width: 100%;
+					font-size: 14px;
+					max-width: 160px;
+				}
+				span.bold {
+					font-size: 28px;
+					font-weight: 600;
+				}
+				.clear {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 320px) and (max-width: 880px) {
+		.searchFour,
+		.searchFive {
+			display: block;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		.searchFive {
+			.innerWrap {
+				float: left;
+			}
+		}
+	}
+
+	@media screen and (max-width: 460px) {
+		.searchFive {
+			.break {
+				display: table-row;
+				height: 20px;
+			}
+		}
+	}
+
+	.searchSix {
+		display: inline-block;
+		width: percentage(480px/960px);
+		margin-top: 20px;
+		.innerWrap {
+			label {
+				color: #99999a;
+			}
+		}
+	}
+
+	.searchSeven {
+		display: inline-block;
+		width: percentage(480px/960px);
+		margin-top: 20px;
+		.innerWrap {
+			float: right;
+			.flex {
+				padding-right: 10px;
+				a {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 530px) {
+		.searchSix,
+		.searchSeven {
+			display: block;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		.searchSeven {
+			.innerWrap {
+				float: left;
+			}
+		}
+	}
+
+	
+	@media screen and (max-width: 880px) {
+		@include rounded(0 10px 10px 10px);
+		&#optionTwo {
+			@include rounded(10px);
+		}	
+	}
+
+	/* Activities Overview */
+	.summary {
+		padding: 20px;
+		background: #ddddde;
+		text-align: center;
+		span {
+			font-weight: 600;
+		}
+	}
+	.content {
+		width: 100%;
+		padding: 12px 35px;
+		height: 155px; //FF required a fixed height for some reason
+		float: left;
+		display: table;
+		position: relative;
+		/* Daily Balance Box */
+		.dailyBalanceBox {
+			position: absolute;
+			top: 12px;
+			left: 35px;
+			width: 150px;
+			height: 130px;
+			padding: 20px 5px;
+			background: #FFF;
+			@include rounded(10px);
+			text-align: center;
+			.title {
+				font-size: 14px;
+				font-weight: 400;
+				margin-top: -4px;
+			}
+			span {
+				font-weight: 700;
+				font-size: 28px;
+				display: block;
+			}
+			a {
+				font-weight: 600;
+				font-size: 12px;
+			}
+			@media screen and (min-width: 768px) and (max-width: 959px) {
+				width: 140px;
+			}
+			@media screen and (min-width: 481px) and (max-width: 767px) {
+				width: 150px;
+			}
+			@media screen and (min-width: 481px) and (max-width: 600px) {
+				left: 15px;
+			}
+			@media screen and (max-width: 480px) {
+				position: relative;
+				top: 0;
+				left: 0;
+				clear: both;
+				margin: 0 auto;
+				width: 100%;
+				.title {
+					margin-bottom: 10px;
+				}
+			}
+		}
+		/* Balance Overview */
+		.balanceOverview {
+			float: left;
+			margin-left: 190px;
+			width: percentage(375px/960px);
+			.flex {
+				display: table;
+			}
+			.tablerow {
+				display: table-row;
+				width: 100%;
+				max-width: 365px;
+				.tablecell {
+					display: table-cell;
+					padding-top: 10px;
+					padding-bottom: 0px;
+					vertical-align: middle;
+					&.type {
+						width: percentage(106px/365px);
+						font-size: 12px;
+						font-weight: 300;
+						padding-right: 10px;
+						text-align: right;
+					}
+					&.bar {
+						width: percentage(138px/365px);
+						padding-right: 12px;
+						.percentage {
+							width: 100%;
+							height: 25px;
+							@include rounded(10px);
+							&.green {
+								background: url("img/bg-green.png") repeat-x;
+							}
+							&.red {
+								background: url("img/bg-red.png") repeat-x;
+							}
+							&.blue {
+								background: url("img/bg-blue.png") repeat-x;
+							}
+						}
+					}
+					&.amount {
+						width: percentage(120px/365px);
+						padding-left: 20px;
+						font-weight: 700;
+						font-size: 16px;
+					}
+					@media screen and (max-width: 480px) {
+						&.bar {
+							display: none;
+						}
+						&.amount {
+							padding-left: 0;
+						}
+					}
+				}
+			}
+			@media screen and (max-width: 767px) {
+				width: 100%;
+			}
+			@media screen and (min-width: 481px) and (max-width: 600px) {
+				margin-left: 140px;
+			}
+			@media screen and (max-width: 480px) {
+				padding-left: 0;
+				margin: 20px 0;
+			}
+		}
+		/* Chart */
+		.graph {
+			float: left;
+			width: percentage(292px/960px);
+			img {
+				width: 100%;
+				max-width: 100%;
+			}
+			@media screen and (max-width: 767px) {
+				display: none;
+			}
+		}
+	}
+}
+
+
+/* Table */
+.transactionHistory {
+	background: #FFF;
+	@include rounded(10px);
+	padding: 0 25px;
+	@include cf;
+	border: 1px solid $borderColor;
+	table {
+		margin: 0;
+		padding: 0;
+		border-collapse: collapse;
+		tr {
+			border-bottom: 1px solid $borderColor;
+			td {
+				font-size: 12px;
+				padding: 20px 30px 20px 0;
+				vertical-align: top;
+				&.first {
+					font-weight: 600;
+				}
+				span {
+					clear: both;
+					display: block;
+					padding-top: 5px;
+					&.positive {
+						font-size: 12px;
+						color: $green;
+						padding-top: 0px;
+						padding-bottom: 5px;
+					}
+					&.negative {
+						font-size: 12px;
+						color: $widthdrawl;
+						padding-top: 0px;
+						padding-bottom: 5px;
+					}
+					&.recurring {
+						background: url("img/icon-recurring.png") no-repeat 0 5px;
+						padding-left: 20px;
+						display: inline-block;
+					}
+				}
+				&.last {
+					text-align: right;
+					padding-right: 0;
+				}
+			}
+			&.last {
+				border-bottom: 0;
+			}
+		}
+	}
+
+
+}

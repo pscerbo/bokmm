@@ -1,0 +1,523 @@
+<!-- Content Area -->
+<div class="main push" role="main">
+    <div class="container">
+        <h1>Transaction History</h1>
+
+        <!-- Download Button -->
+        <div class="btnWrap">
+            <a href="" class="btn blue">Download</a>
+        </div>
+
+        <!-- Search Options & Activities Overview -->
+        <div class="historySearch">
+            <div class="col viewAccounts">
+                <strong>View:</strong> <span class="accountsAvailableMenu">Everyday Expenses and Bill (...1234)</span>
+                <div class="availableAccountsDropdown">
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <a href="">All Accounts</a>
+                            </li>
+                        </ul>
+                        <h3>Deposit Accounts</h3>
+                        <ul>
+                            <li>
+                                <a href="">Every Expenses and Bill (...1234)</a>
+                            </li>
+                            <li>
+                                <a href="" class="selected">Savings for Cash (...5678)</a>
+                            </li>
+                        </ul>
+                        <h3>Loan Accounts</h3>
+                        <ul>
+                            <li>
+                                <a href="">Education Loan (...1234)</a>
+                            </li>
+                            <li>
+                                <a href="">Housing (...5678)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col right">
+                <div class="optionButton">
+                    <a href="#optionOne">Search Transactions</a>
+                </div>
+                <div class="optionButton">
+                    <a href="#optionTwo">Activities Overview</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="historySearchOptions" id="optionOne">
+            <div class="searchOne">
+                <div class="innerWrap">
+                    <label>Type:</label>
+                    <div class="selectWrap">
+                        <select class="select-style">
+                            <option>Checking for Cash (...1234)</option>
+                            <option>Everyday Expenses and Bill (...1234)</option>
+                            <option>CDs Account (...1234)</option>
+                            <option>My Secret Savings (...1234)</option>
+                            <option>Another Secret Savings (...1234)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="break"></div>
+            <div class="searchTwo">
+                <div class="innerWrap">
+                    <label>Description:</label>
+                    <input type="text" >
+                </div>
+            </div>
+            <div class="searchThree">
+                <div class="innerWrap">
+                    <label>Check #:</label>
+                    <input type="text">
+                </div>
+            </div>
+            
+            <div class="clear20"></div>
+            
+            <div class="searchFour">
+                <div class="innerWrap">
+                    <div class="flex">
+                        <label>Amount:</label>
+                    </div>
+                    <div class="flex">
+                        <span class="bold">$</span>
+                    </div>
+                    <div class="flex">
+                        <input type="text">
+                    </div>
+                    <div class="break"></div>
+                    <div class="flex alignRight">
+                        to
+                    </div>
+                    <div class="flex">
+                        <span class="bold">$</span>
+                    </div>
+                    <div class="flex">
+                        <input type="text">
+                    </div>
+                    <div class="flex">
+                        <a href="" class="clear">Clear</a>
+                    </div>
+                </div>
+            </div>
+            <div class="searchFive">
+                <div class="innerWrap">
+                    <div class="flex">
+                        <label>Date:</label>
+                    </div>
+                    <div class="flex">From</div>
+                    <div class="flex">
+                        <input type="text" readonly="true" class="dateRange">
+                    </div>
+                    <div class="flex">To</div>
+                    <div class="flex">
+                        <input type="text" readonly="true" class="dateRange">
+                    </div>
+                    <div class="flex">
+                        <a href="" class="clear">Clear</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cleaner"></div>
+
+            <div class="searchSix">
+                <div class="innerWrap">
+                    <input id="displayFuture" type="checkbox">
+                    <label for="displayFuture">Display Future Transactions</label>
+                </div>
+            </div>
+
+            <div class="searchSeven">
+                <div class="innerWrap">
+                    <div class="flex">
+                        <input type="submit" value="Search">
+                    </div>
+                    <div class="flex">
+                        <a href="">Clear All Searches</a>    
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="historySearchOptions" id="optionTwo">
+            <div class="summary">
+                <span>Summary:</span> Last 60 days
+            </div>
+            <div class="content">
+                <!-- Daily Balance -->
+                <div class="dailyBalanceBox">
+                    <div class="title">Average Daily Balance:</div>
+                    <span>$11,235</span> <a href="">View Statements</a>
+                </div>
+                <!-- Balance Overview -->
+                <div class="balanceOverview">
+                    <div class="flex">
+                        <div class="tablerow">
+                            <div class="tablecell type">Deposits</div>
+                            <div class="tablecell bar">
+                                <div class="percentage green" style='width: 100%'></div>
+                            </div>
+                            <div class="tablecell amount">$180,750</div>
+                        </div>
+                        <div class="tablerow">
+                            <div class="tablecell type">Withdrawals</div>
+                            <div class="tablecell bar">
+                                <div class="percentage red" style='width: 70%'></div>
+                            </div>
+                            <div class="tablecell amount">$16,230</div>
+                        </div>
+                        <div class="tablerow">
+                            <div class="tablecell type">Transfers</div>
+                            <div class="tablecell bar">
+                                <div class="percentage blue" style='width: 40%'></div>
+                            </div>
+                            <div class="tablecell amount">$2,530</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Chart -->
+                <div class="graph">
+                    <img src="images/fpo-graph.jpg" alt="FPO Graph"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alert -->
+        <div class="alert">
+            <div class="alertMsg">
+                Your password has successfully been reset. An updated confirmation was sent to your email.
+            </div>
+        </div>
+        <!-- /Alert -->
+
+        <!-- Panel -->
+        <div class="panel">
+
+            <div class="accountOverview">
+                <div class="acctTitle">
+                    <div class="sliderControls">
+                        <h2>Future Transactions</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accountDetailsWrap">
+                <div class="accountDetails">
+
+                    <div class="transactionHistory">
+                        <table>
+                            <tr>
+                                <td>
+                                    <span class="recurring">Scheduled 12/02/2015</span>
+                                    <span>PAYMENT</span>
+                                </td>
+                                <td>
+                                    Description can be Check #, Payee name, To account...ect.
+                                    <span><a href="">View Check</a></span>
+                                </td>
+                                <td>
+                                    <span class="negative">+300,1000.00</span>
+                                </td>
+                                <td class="last">
+                                    <a href=""><strong>Inquiry</strong></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="recurring">Scheduled 12/02/2015</span>
+                                    <span>TRANSFER</span>
+                                </td>
+                                <td>
+                                    Description can be Check #, Payee name, To account...ect.
+                                </td>
+                                <td>
+                                    +200,1000.00
+                                </td>
+                                <td class="last">
+                                    <a href=""><strong>Inquiry</strong></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="recurring">Scheduled 12/02/2015</span>
+                                    <span>PAYMENT</span>
+                                </td>
+                                <td>
+                                    Description can be Check #, Payee name, To account...ect.
+                                    <span><a href="">View Check</a></span>
+                                </td>
+                                <td>
+                                    <span class="negative">+300,1000.00</span>
+                                </td>
+                                <td class="last">
+                                    <a href=""><strong>Inquiry</strong></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Scheduled 12/02/2015
+                                    <span>PAYMENT</span>
+                                </td>
+                                <td>
+                                    Description can be Check #, Payee name, To account...ect.
+                                </td>
+                                <td>
+                                    <span class="negative">+200,1000.00</span>
+                                </td>
+                                <td class="last">
+                                    <a href=""><strong>Inquiry</strong></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /Panel -->
+
+        <!-- Panel -->
+        <div class="panel">
+
+            <div class="accountOverview">
+                <div class="acctTitle">
+                    <div class="sliderControls">
+                        <h2>Pending Transactions</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accountDetailsWrap">
+                <div class="accountDetails">
+
+                    <div class="transactionHistory">
+                        <table>
+                            <tr>
+                                <td>
+                                    Pending
+                                    <span>CHECK #52875p0</span>
+                                </td>
+                                <td>
+                                    Description can be Check #, Payee name, To account...ect.
+                                    <span><a href="">View Check</a></span>
+                                </td>
+                                <td>
+                                    <span class="positive">+300,1000.00</span>
+                                </td>
+                                <td class="last">
+                                    <a href=""><strong>Inquiry</strong></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Pending
+                                    <span>CHECK #52875p0</span>
+                                </td>
+                                <td>
+                                    Description can be Check #, Payee name, To account...ect.
+                                </td>
+                                <td>
+                                    <span class="negative">+200,1000.00</span>
+                                </td>
+                                <td class="last">
+                                    <a href=""><strong>Inquiry</strong></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /Panel -->
+
+        <!-- Panel -->
+        <div class="panel">
+
+            <div class="accountOverview">
+                <div class="acctTitle">
+                    <div class="sliderControls">
+                        <h2>Posted Transactions</h2>
+                    </div>
+                </div>
+                <!-- Status Filters -->
+                <div class="acctStatus">
+                    <div class="status">
+                        <label>Amount of History to Show:</label>
+                        <div class="selectWrap">
+                            <select class="select-style">
+                                <option>30 Days</option>
+                                <option>60 Days</option>
+                                <option>90 Days</option>
+                                <option>180 Days</option>
+                                <option>All Available</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Status Filters -->
+            </div>
+
+            <div class="accountDetailsWrap">
+                <div class="accountDetails">
+                    <div class="transactionHistory">
+                        <table>
+                            <tr>
+                                <td>
+                                    11/02/2014
+                                    <span>CHECK #52875p0</span>
+                                </td>
+                                <td>
+                                    Description can be Check #, Payee name, To account...ect.
+                                    <span><a href="">View Check</a></span>
+                                </td>
+                                <td>
+                                    <span class="positive">+300,1000.00</span>
+                                    $1,960,100.00
+                                </td>
+                                <td class="last">
+                                    <a href=""><strong>Inquiry</strong></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    11/02/2014
+                                    <span>CHECK #52875p0</span>
+                                </td>
+                                <td>
+                                    Description can be Check #, Payee name, To account...ect.
+                                    <span><a href="">View Check</a></span>
+                                </td>
+                                <td>
+                                    <span class="negative">+200,1000.00</span>
+                                    $1,960,100.00
+                                </td>
+                                <td class="last">
+                                    <a href=""><strong>Inquiry</strong></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    11/02/2014
+                                    <span>CHECK #52875p0</span>
+                                </td>
+                                <td>
+                                    Description can be Check #, Payee name, To account...ect.
+                                    <span><a href="">View Check</a></span>
+                                </td>
+                                <td>
+                                    <span class="positive">+300,1000.00</span>
+                                    $1,960,100.00
+                                </td>
+                                <td class="last">
+                                    <a href=""><strong>Inquiry</strong></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    11/02/2014
+                                    <span>CHECK #52875p0</span>
+                                </td>
+                                <td>
+                                    Description can be Check #, Payee name, To account...ect.
+                                    <span><a href="">View Check</a></span>
+                                </td>
+                                <td>
+                                    <span class="negative">+200,1000.00</span>
+                                    $1,960,100.00
+                                </td>
+                                <td class="last">
+                                    <a href=""><strong>Inquiry</strong></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    11/02/2014
+                                    <span>CHECK #52875p0</span>
+                                </td>
+                                <td>
+                                    Description can be Check #, Payee name, To account...ect.
+                                    <span><a href="">View Check</a></span>
+                                </td>
+                                <td>
+                                    <span class="positive">+300,1000.00</span>
+                                    $1,960,100.00
+                                </td>
+                                <td class="last">
+                                    <a href=""><strong>Inquiry</strong></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    11/02/2014
+                                    <span>CHECK #52875p0</span>
+                                </td>
+                                <td>
+                                    Description can be Check #, Payee name, To account...ect.
+                                    <span><a href="">View Check</a></span>
+                                </td>
+                                <td>
+                                    <span class="negative">+200,1000.00</span>
+                                    $1,960,100.00
+                                </td>
+                                <td class="last">
+                                    <a href=""><strong>Inquiry</strong></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    11/02/2014
+                                    <span>CHECK #52875p0</span>
+                                </td>
+                                <td>
+                                    Description can be Check #, Payee name, To account...ect.
+                                    <span><a href="">View Check</a></span>
+                                </td>
+                                <td>
+                                    <span class="positive">+300,1000.00</span>
+                                    $1,960,100.00
+                                </td>
+                                <td class="last">
+                                    <a href=""><strong>Inquiry</strong></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    11/02/2014
+                                    <span>CHECK #52875p0</span>
+                                </td>
+                                <td>
+                                    Description can be Check #, Payee name, To account...ect.
+                                    <span><a href="">View Check</a></span>
+                                </td>
+                                <td>
+                                    <span class="negative">+200,1000.00</span>
+                                    $1,960,100.00
+                                </td>
+                                <td class="last">
+                                    <a href=""><strong>Inquiry</strong></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /Panel -->
+
+
+
+    </div>
+    <!-- /Container -->
+</div>
+<!-- /Content Area (Main) -->

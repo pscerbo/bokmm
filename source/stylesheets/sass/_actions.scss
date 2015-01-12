@@ -1,0 +1,281 @@
+/**
+ * Actions Sliders (_actions.scss)
+ */
+
+.actionsWrap {
+	float: left;
+	//margin-top: -50px;
+	margin-top: -35px;
+	width: 100%;
+	/* Panel Triggers */
+	.actionItem {
+		float: left;
+		@include rounded(10px);
+		border: 1px solid $borderColor;
+		margin-right: percentage(6px/310px);
+		background: #FFF;
+		position: relative;
+		z-index: 100;
+		margin-bottom: -1px;
+		a {
+			padding: 10px 20px 10px 20px;
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			font-size: 14px;
+			outline: none;
+			&:after {
+				content: "";
+				width: auto;
+				height: 7px;
+				margin-top: 3px;
+				background: url("img/arrow-down-blue.png") no-repeat center center;
+				display: block;
+			}
+		}
+		&.current {
+			border-width: 1px 1px 0 1px;
+			@include rounded(10px 10px 0 0);
+			a {
+				padding-bottom: 30px;
+				&:after {
+					content: "";
+					width: auto;
+					height: 7px;
+					margin-top: 3px;
+					background: url("img/arrow-up-blue.png") no-repeat center center;
+					display: block;
+				}
+			}
+		}
+
+		@media screen and (min-width: 320px) and (max-width: 480px) {
+			width: 48%;
+			&.mobileRight {
+				float: right;
+				margin-right: 0;
+			}
+			a {
+				font-size: 13px;
+				padding: 10px 6px;
+			}
+		}
+
+	}
+	/* Panel Content */
+	.actionContent {
+		display: none;
+		width: 100% !important;
+		border: 1px solid $tabBorder;
+		@include rounded(10px);
+		background: #FFF;
+		padding: 20px;
+		@include cf;
+		overflow: hidden;
+		&.firstPanel {
+			@include rounded(0 10px 10px 10px);
+		}
+		h2 {
+			font-size: 18px;
+			margin-top: 10px;
+			float: left;
+		}
+
+		ul.actions {
+			@include listReset;
+			text-align: center;
+			li {
+				display: inline-block;
+				padding-left: percentage(45px/960px);
+				padding-right: percentage(45px/960px);
+				a {
+					text-decoration: none;
+					span {
+						display: block;
+						margin-top: 15px;
+						font-size: 14px;
+						color: #000;
+					}
+				}
+			}
+		}
+
+		/* Section Promo */
+		.sectionPromo {
+			@include cf;
+			display: block;
+			margin-top: 30px;
+			margin-bottom: -20px;
+			margin-left: -20px;
+			margin-right: -20px;
+			img {
+				width: 100%;
+				max-width: 100%;
+				overflow: hidden;
+			}
+			/* Hide on screens below 640px */
+			@media screen and (max-width: 640px) {
+				display: none;
+			}
+		}
+
+		@media screen and (min-width: 320px) and (max-width: 480px) {
+			&.secondPanel {
+				@include rounded(10px 0 10px 10px);
+				a.btn.floatRight {
+					clear: both;
+					float: left;
+					margin: 10px 0;
+				}
+			}
+		}
+
+	}
+
+	//.actionsWrap
+	@media screen and (min-width: 768px) and (max-width: 870px) {
+		margin-top: 0px;
+	}
+
+	@media screen and (min-width: 641px) and (max-width: 767px) {
+		margin-top: -30px;
+	}
+	@media screen and (min-width: 320px) and (max-width: 640px) {
+		margin-top: 0px;
+	}
+}
+
+.singleTab {
+	float: left;
+	@include rounded(10px);
+	border: 1px solid $borderColor;
+	margin-right: percentage(6px/310px);
+	background: #FFF;
+	position: relative;
+	z-index: 100;
+	margin-bottom: -1px;
+	a {
+		padding: 10px 20px 10px 20px;
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		font-size: 14px;
+		outline: none;
+		&:after {
+			content: "";
+			width: auto;
+			height: 7px;
+			margin-top: 3px;
+			background: url("img/arrow-down-blue.png") no-repeat center center;
+			display: block;
+		}
+	}
+	&.current {
+		border-width: 1px 1px 0 1px;
+		@include rounded(10px 10px 0 0);
+		a {
+			padding-bottom: 30px;
+			&:after {
+				content: "";
+				width: auto;
+				height: 7px;
+				margin-top: 3px;
+				background: url("img/arrow-up-blue.png") no-repeat center center;
+				display: block;
+			}
+		}
+	}
+
+	@media screen and (min-width: 320px) and (max-width: 480px) {
+		width: 48%;
+		&.mobileRight {
+			float: right;
+			margin-right: 0;
+		}
+		a {
+			font-size: 13px;
+			padding: 10px 6px;
+		}
+	}
+
+}
+
+.singleTabContent {
+	display: none;
+	width: 100% !important;
+	border: 1px solid $tabBorder;
+	@include rounded(10px);
+	background: #FFF;
+	padding: 20px;
+	@include cf;
+	overflow: hidden;
+
+	h2 {
+		font-size: 18px;
+		margin-top: 10px;
+		float: left;
+	}
+
+	a {
+		font-weight: 600;
+		font-size: 14px;
+		&.btn {
+			font-weight: 400;
+			padding: 11px 50px;
+		}
+	}
+
+	.recurring {
+		background: url("img/icon-recurring.png") no-repeat right 2px;
+		padding-right: 24px;
+		padding-left: 0;
+		display: inline-block;
+	}
+
+	@media screen and (max-width: 870px) {
+		@include rounded(0 10px 10px 10px);
+	}
+
+	@media screen and (min-width: 320px) and (max-width: 480px) {
+		padding: 0 10px 10px 10px;
+		&.secondPanel {
+			@include rounded(10px 0 10px 10px);
+			a.btn.floatRight {
+				clear: both;
+				float: left;
+				margin: 10px 0;
+			}
+		}
+	}
+
+	table.transactions {
+		border-top: 0;
+		td {
+			border: 0;
+			font-size: 12px;
+			&:first-child {
+				text-transform: uppercase;
+				max-width: none;
+			}
+			a {
+				font-weight: 600;
+			}
+			@media screen and (max-width: 767px) {
+				&.hiddenMobile {
+					display: none;
+				}
+			}
+		}
+		tr {
+			td {
+				border-top: 1px solid $borderColor;
+			}
+			&:first-child {
+				td {
+					border-top: 0;
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,20 @@
+/**
+ * Flash Messages (_flashMessage.scss)
+ */
+
+.flashMessage {
+	width: 100%;
+	font-size: 16px;
+	display: block;
+	vertical-align: middle;
+	background: none;
+	padding: 0;
+	margin-bottom: 20px;
+	background: lightgray;
+	@include cf;
+	@include rounded(10px);
+	padding: 10px 20px 12px 20px;
+	&.payeeFlash {
+		display: none;
+	}
+}

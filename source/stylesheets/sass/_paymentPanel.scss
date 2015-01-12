@@ -1,0 +1,130 @@
+/**
+ * Payment Panel (_paymentPanel.scss)
+ */
+
+.panel {
+	&.paymentDetailView {
+		border: 1px solid $borderColor;
+		background: #f8f8f8;
+		padding: 35px 20px;
+		margin-bottom: 10px;
+		h2 {
+			text-transform: uppercase;
+			font-weight: 600;
+			float: left;
+			width: percentage(700px/958px) !important;
+			a {
+				color: $red;
+			}
+		}
+		.payment {
+			color: #000;
+			font-weight: 600;
+			font-size: 28px;
+			float: left;
+			text-align: right;
+			width: percentage(258px/958px);
+		}
+
+		/* Payment Details Columns */
+		.col {
+			float: left;
+			margin-top: 5px;
+			font-size: 16px;
+			padding-right: 15px;
+			padding-bottom: 10px;
+			&.fromAcctn {
+				width: percentage(220px/958px);
+			}
+			&.sendOn {
+				width: percentage(240px/958px);
+			}
+			&.frequency {
+				width: percentage(240px/958px);
+			}
+			&.memo {
+				width: percentage(258px/958px);
+			}
+			&.confirmation {
+				width: percentage(220px/958px);
+			}
+			&.tracking {
+				width: percentage(240px/958px);
+			}
+
+			h4 {
+				font-weight: 600;
+				font-size: 14px;
+				margin-top: 10px;
+				margin-bottom: 7px;
+			}
+
+			@media screen and (max-width: 767px) {
+				&.fromAcctn, &.sendOn, &.frequency, &.memo, &.confirmation, &.tracking {
+					width: 50%;
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				&.fromAcctn, &.sendOn, &.frequency, &.memo, &.confirmation, &.tracking {
+					width: 100%;
+				}
+			}
+		}
+
+		/* Additional Payment Options */
+		.addPaymentOptions {
+			font-size: 14px;
+			margin-top: 25px;
+			width: 100%;
+			clear: both;
+			@include cf;
+			.isRecurring {
+				float: left;
+				width: 100%;
+				.recurring {
+					background-position: 0 3px;
+				}
+			}
+			.isFuture {
+				float: left;
+				width: 100%;
+				text-align: left;
+				margin-top: 30px;
+				a {
+					font-weight: 600;
+					&.btn {
+						padding: 10px 35px;
+						margin-right: 20px;
+						font-weight: 400;
+					}
+				}
+			}
+			@media screen and (max-width: 640px) {
+				.isRecurring, .isFuture {
+					width: 100%;
+					clear: both;
+					text-align: left;
+				}
+				.isRecurring {
+					margin-bottom: 15px;
+				}
+			}
+		}
+
+		
+		@media screen and (max-width: 640px) {
+			h2 {
+				display: block;
+				float: none;
+				width: 100% !important;
+			}
+			.payment {
+				display: block;
+				float: none;
+				width: 100%;
+				text-align: left;
+			}
+		}
+	}
+}

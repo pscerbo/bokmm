@@ -1,0 +1,564 @@
+/**
+ * Payee Screen (_payee.scss)
+ */
+
+.panel {
+	&.payee {
+		width: 100%;
+		border: 1px solid $borderColor;
+		background: #f8f8f8;
+		padding: 35px 0;
+		margin-bottom: 10px;
+		overflow: visible;
+		.wrap {
+			padding: 0 20px;
+		}
+		.payeeName {
+			width: percentage(230px/958px);
+			padding-right: percentage(19px/958px);
+			float: left;
+			h2 {
+				font-size: 22px;
+				font-weight: 600;
+				line-height: 24px;
+				float: left;
+				margin-right: 10px;
+				a {
+					color: $red;
+				}
+			}
+			a.showHide {
+				clear: both;
+				font-weight: 600;
+				font-size: 14px;
+				display: block;
+				padding-top: 5px;
+			}
+		}
+		.recentPayment {
+			float: left;
+			width: percentage(320px/958px);
+			padding-right: 10px;
+			//background: lightgreen;
+			h4 {
+				font-weight: 600;
+				font-size: 14px;
+			}
+			.table {
+				display: table;
+				width: 100%;
+				.row {
+					display: table-row;
+					.cell {
+						display: table-cell;
+						font-size: 16px;
+						vertical-align: top;
+						padding-bottom: 8px;
+						.date {
+							padding-right: 5px;
+							float: left;
+							/*
+							&.isRecurring {
+								&:after {
+									content: "";
+									width: 15px;
+									height: 13px;
+									display: inline-block;
+									background: url("img/icon-recurring.png") no-repeat 0 0;
+								}
+							}
+							*/
+						}
+						&.amount {
+							padding-left: 10px;
+							text-align: right;
+						}
+					}
+				}
+			}
+
+			@media screen and (min-width: 871px) and (max-width: 920px) {
+				.table {
+					.row {
+						.cell {
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+
+		/* Pay History Tab */
+		.payHistory {
+			float: left;
+			width: percentage(132px/958px);
+			padding-left: percentage(10px/958px);
+			padding-top: 10px;
+
+			@media screen and (max-width: 870px) {
+				padding-left: 0;
+			}
+		}
+
+		/* Pay History Tab Content */
+		.actionContent {
+			display: none;
+			width: 100% !important;
+			border: 1px solid $tabBorder;
+			@include rounded(10px);
+			background: #FFF;
+			padding: 20px;
+			@include cf;
+			overflow: hidden;
+			@media screen and (max-width: 870px) {
+				@include rounded(0 10px 10px 10px);
+			}
+		}
+
+
+		/* Payment Amount */
+		.payAmount {
+			float: left;
+			text-align: right;
+			width: percentage(274px/958px);
+			padding-top: 10px;
+			font-size: 0;
+			h4 {
+				display: inline-block;
+				vertical-align: top;
+				font-size: 14px;
+				margin-right: 7px;
+				margin-top: 15px;
+			}
+			.paywrap {
+				display: inline-block;
+				white-space: nowrap;
+				span {
+					font-size: 28px;
+					font-weight: 600;
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 7px;
+				}
+
+				input[type="text"], input[type="number"]{
+					width: 165px;
+					display: inline-block;
+					vertical-align: middle;
+					font-size: 28px;
+					line-height: 28px;
+					padding-top: 7px;
+					font-weight: 600;
+					text-align: right;
+					vertical-align: middle;
+				}
+				.clearVal {
+					font-size: 14px;
+					line-height: 14px;
+					color: $linkBlue;
+					font-weight: 600;
+					margin-top: 5px;
+					padding-right: 5px;
+					cursor: pointer;
+				}
+			}
+		}
+
+		@media screen and (min-width: 701px) and (max-width: 870px) {
+			.payeeName,
+			.recentPayment,
+			.payHistory,
+			.payAmount {
+				width: 50%;
+			}
+			.recentPayment {
+				margin-bottom: 20px;
+			}
+		}
+
+		@media screen and (min-width: 641px) and (max-width: 700px) {
+			.payeeName {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+			.recentPayment {
+				display: none;
+			}
+			.payHistory,
+			.payAmount {
+				width: 50%;
+			}
+		}
+
+		@media screen and (min-width: 481px) and (max-width: 640px) {
+			.payeeName {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+			.recentPayment {
+				display: none;
+			}
+			.payHistory {
+				width: 40%;
+				.singleTab {
+					width: 100%;
+				}
+			}
+			.payAmount {
+				width: 60%;
+			}
+		}
+
+		@media screen and (min-width: 320px) and (max-width: 480px) {
+			.payeeName {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+			.recentPayment {
+				display: none;
+			}
+			.payHistory {
+				width: 30%;
+				.singleTab {
+					width: 100%;
+				}
+			}
+			.payAmount {
+				width: 70%;
+				.paywrap {
+					span {
+						font-size: 22px;
+					}
+					input[type="text"], input[type="number"] {
+						width: 116px;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+
+		//Hidden Panel for each Payee
+		.paymentDetails {
+			margin-top: 30px;
+			margin-bottom: -35px;
+			display: none;
+			width: 100%;
+			padding: 10px 20px;
+			background: #FFF;
+			border-top: 1px solid $borderColor;
+			font-size: 0;
+			@include rounded(0 0 10px 10px);
+			position: relative;
+			.detailCol {
+				display: inline-block;
+				vertical-align: top;
+				&.fromAccount {
+					font-size: 14px;
+					//width: percentage(365px/958px);
+					width: percentage(345px/958px);
+					padding-top: 5px;
+					padding-right: 20px;
+					label {
+						font-weight: 600;
+						display: table-cell;
+						white-space: nowrap;
+						padding-right: 10px;
+						vertical-align: top;
+						padding-top: 10px;
+					}
+					.selectWrap {
+						display: table-cell;
+					}
+				}
+				&.sentOn {
+					font-size: 14px;
+					width: percentage(208px/958px);
+					padding-top: 3px;
+					position: relative;
+					label {
+						font-size: 14px;
+						font-weight: 600;
+					}
+					input {
+						width: 115px;
+					}
+				}
+				&.recurringPaymentPicker {
+					font-size: 16px;
+					//width: percentage(185px/958px);
+					width: percentage(255px/958px);
+					position: relative;
+					.rpHandle {
+						float: left;
+						padding: 10px 10px 28px 10px;
+						@include rounded(10px 10px 0 0);
+						a {
+							display: inline-block;
+							background: url("img/arrow-down-blue.png") no-repeat right center;
+							padding-right: 25px;
+							text-decoration: none;
+							outline: none;
+						}
+						&.on {
+							background: #ddddde;
+							a {
+								background: url("img/arrow-up-blue.png") no-repeat right center;
+							}
+						}
+						&.makeRecurring {
+							a {
+								&:before {
+									content: "";
+									float: left;
+									width: 20px;
+									height: 20px;
+									background: url("img/icon-recurring.png") 0 5px no-repeat;
+									margin-right: 5px;
+								}
+							}
+						}
+					}
+				}
+				&.memo {
+					font-size: 16px;
+					//width: percentage(200px/958px);
+					width: percentage(150px/958px);
+					text-align: right;
+					input[type=text] {
+						margin-top: 3px;
+						max-width: 160px;
+					}
+				}
+
+				@media screen and (min-width: 871px) and (max-width: 925px) {
+					&.fromAccount {
+						label {
+							display: block;
+							margin-bottom: 10px;
+							padding-top: 0;
+						}
+						.selectWrap {
+							display: block;
+						}
+					}
+					&.sentOn {
+						width: percentage(160px/958px);
+						label {
+							display: block;
+							margin-bottom: 10px;
+						}
+					}
+					&.recurringPaymentPicker {
+						width: percentage(290px/958px);
+						margin-top: 29px;
+					}
+					&.memo {
+						margin-top: 29px;
+					}
+				}
+
+				@media screen and (min-width: 641px) and (max-width: 870px) {
+					&.fromAccount {
+						width: 70%;
+						margin-bottom: 20px;
+					}
+					&.sentOn {
+						width: 30%;
+						margin-bottom: 20px;
+						text-align: right;
+					}
+					&.recurringPaymentPicker {
+						width: 50%;
+					}
+					&.memo {
+						width: 50%;
+						input[type=text]{
+							width: 80%;
+						}
+					}
+				}
+
+				@media screen and (min-width: 481px) and (max-width: 640px) {
+					&.fromAccount {
+						width: 50%;
+						margin-bottom: 20px;
+						margin-top: 0;
+						label {
+							display: block;
+						}
+					}
+					&.sentOn {
+						width: 50%;
+						margin-bottom: 20px;
+						text-align: right;
+						label {
+							display: block;
+							margin-top: 12px;
+						}
+					}
+					&.recurringPaymentPicker {
+						width: 50%;
+					}
+					&.memo {
+						width: 50%;
+						input[type=text]{
+							width: 80%;
+						}
+					}
+				}
+
+				@media screen and (min-width: 320px) and (max-width: 480px) {
+					&.fromAccount {
+						width: 100%;
+						margin-bottom: 0px;
+						margin-top: 0;
+						.selectWrap {
+							display: block;
+							margin-top: 5px;
+							margin-bottom: 0;
+						}
+					}
+					&.sentOn {
+						width: 100%;
+						margin-bottom: 20px;
+						//text-align: left;
+						label {
+							//display: block;
+							margin-top: 12px;
+						}
+					}
+					&.recurringPaymentPicker {
+						width: 100%;
+						margin-bottom: 0px;
+						position: relative;
+					}
+					&.memo {
+						width: 100%;
+						text-align: left;
+						input[type=text]{
+							width: 100%;
+						}
+					}
+				}
+
+			}
+			.notes {
+				@include cf;
+				margin-top: 15px;
+				clear: both;
+				font-size: 12px;
+				width: 100%;
+			}
+		}
+
+		/* Hidden Payee */
+		&.hiddenPayee {
+			border: dashed 3px $borderColor;
+		}
+		.hiddenMessage {
+			display: none;
+			font-size: 16px;
+			padding-top: 15px;
+		}
+
+
+
+	}
+}
+
+.payeeOption {
+	width: 100%;
+	margin-bottom: 15px;
+	@include cf;
+	.sort {
+		float: left;
+		width: percentage(479px/958px);
+		label {
+			float: left;
+			padding-top: 10px;
+			font-weight: 600;
+			margin-right: 10px;
+			font-size: 14px;
+		}
+		.selectWrap {
+			display: table-cell;
+		}
+	}
+	.search {
+		float: left;
+		width: percentage(479px/958px);
+		text-align: right;
+		padding-right: 11px;
+		&.single {
+			float: right;
+			width: 100%;
+		}
+		label {
+			//float: right;
+			padding-top: 12px;
+			font-weight: 600;
+			font-size: 14px;
+			margin-right: 10px;
+		}
+		input[type="text"]{
+			width: percentage(300px/479px);
+			@media screen and (max-width: 830px) {
+				width: percentage(200px/479px);
+			}
+		}
+		.clearInput {
+			width: 15px;
+			height: 17px;
+			margin-top: 3px;
+			display: inline-block;
+			position: relative;
+			margin-left: -30px;
+			background: url("img/x.png") no-repeat center 4px;
+			cursor: pointer;
+		}
+	}
+
+
+
+	@media screen and (max-width: 640px) {
+		.sort, .search {
+			width: 100%;
+		}
+		.sort {
+			margin-bottom: -20px;
+			.selectWrap {
+				display: table-cell;
+				width: 100%;
+			}
+		}
+		.search {
+			margin-top: 20px;
+			text-align: left;
+			input[type="text"]{
+				width: percentage(479px/958px);
+				display: table-cell;
+			}
+			input[type="submit"]{
+				display: table-cell;
+			}
+		}
+	}
+
+}
+
+.noPayeeFound {
+	width: 100%;
+	@include cf;
+	border: 1px solid $borderColor;
+	background: #f8f8f8;
+	padding: 40px 20px;
+	font-size: 20px;
+	font-weight: 400;
+	color: #000;
+	text-align: center;
+	@include rounded(10px);
+	display: none;
+	&.show {
+		display: block;
+	}
+}

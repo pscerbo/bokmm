@@ -1,0 +1,247 @@
+/**
+ * Recurring Payment Panel (_recurringPaymentPanel.scss)
+ */
+
+.recurringPaymentPanel {
+	display: none;
+	width: 100%;
+	max-width: $baseWidth;
+	left: 0;
+	position: absolute;
+	background: #ddddde;
+	padding: 5px;
+	@include cf;
+	@include rounded(0 0 10px 10px);
+	@include box-shadow(0px, 4px, 5px, rgba(0, 0, 0, 0.25));
+	z-index: 450;
+	.innerWrap {
+		float: left;
+		background: #FFF;
+		@include rounded(10px);
+		width: 100%;
+		font-size: 16px;
+		padding: 20px 20px;
+		margin-left: 0px;
+		font-size: 0;
+		.col {
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+			vertical-align: top;
+			//width: percentage(376px/1128px);
+			border-left: 1px solid #FFF;
+			padding-right: 10px;
+			@include cf;
+			label {
+				float: left;
+				font-size: 14px;
+				font-weight: 600;
+				margin-bottom: 5px;
+				padding-top: 10px;
+				padding-right: percentage(10px/958px);
+			}
+			input[type="text"] {
+				float: left;
+				font-size: 16px;
+				width: 100%;
+				max-width: 115px;
+				color: #000;
+			}
+			a {
+				font-size: 14px;
+				font-weight: 600;
+				&.btn {
+					padding: 10px 40px;
+					margin-left: 20px;
+					font-weight: 400;
+					margin-right: 0;
+				}
+			}
+			&.frequency {
+				width: percentage(400px/1128px);
+				label {
+					display: block;
+				}
+				.selectWrap {
+					display: block;
+					padding-left: 0px;
+				}
+			}
+			&.numOfPayments {
+				width: percentage(330px/1128px);
+				.break {
+					display: none;
+				}
+				label {
+					padding-right: percentage(10px/1128px);
+					display: block;
+					float: none;
+				}
+				input[type=text] {
+					float: left;
+					width: 100%;
+					margin-right: 20px;
+					&:disabled {
+						background: lightgray;
+					}
+				}
+			}
+			&.cancelRecurringPayment {
+				text-align: right;
+				width: percentage(210px/1128px);
+				margin-top: 45px;
+			}
+			&.saveRecurringPayment {
+				text-align: right;
+				width: percentage(170px/1128px);
+				padding-right: 0;
+				margin-top: 38px;
+				a {
+					margin-right: 0;
+					float: right;
+				}
+			}
+
+			@media screen and (min-width: 641px) and (max-width: 960px) {
+				&.numOfPayments {
+					.break {
+						display: block;
+						clear: both;
+					}
+				}
+			}
+			
+
+			@media screen and (min-width: 768px) and (max-width: 870px) {
+				&.frequency {
+					width: 25%;
+				}
+				&.numOfPayments {
+					width: 25%;
+				}
+				&.cancelRecurringPayment {
+					width: 25%;
+				}
+				&.saveRecurringPayment {
+					width: 25%;
+				}
+			}
+
+			@media screen and (min-width: 641px) and (max-width: 767px) {
+				&.frequency {
+					width: 50%;
+				}
+				&.numOfPayments {
+					width: 50%;
+					.break {
+						display: none;
+					}
+				}
+				&.cancelRecurringPayment {
+					width: 50%;
+					text-align: right;
+					margin-top: 20px;
+				}
+				&.saveRecurringPayment {
+					width: 50%;
+					margin-top: 10px;
+					a.btn {
+						float: left;
+						margin-left: 0;
+					}
+				}
+			}		
+
+			@media screen and (min-width: 401px) and (max-width: 640px) {
+				&.frequency {
+					width: 50%;
+					label {
+						display: block;
+					}
+					.selectWrap {
+						display: block;
+						padding-left: 0px;
+					}
+				}
+				&.numOfPayments {
+					width: 50%;
+				}
+				&.cancelRecurringPayment {
+					width: 50%;
+					text-align: right;
+					margin-top: 20px;
+				}
+				&.saveRecurringPayment {
+					width: 50%;
+					margin-top: 10px;
+					a.btn {
+						float: left;
+						margin-left: 0;
+					}
+				}
+			}
+
+			@media screen and (min-width: 401px) and (max-width: 580px) {
+				&.numOfPayments {
+					.break {
+						display: block;
+						clear: both;
+					}
+				}
+			}
+
+			@media screen and (min-width: 320px) and (max-width: 400px) {
+				&.frequency {
+					width: 100%;
+					margin-bottom: 5px;
+					label {
+						display: block;
+					}
+					.selectWrap {
+						display: block;
+						padding-left: 0px;
+					}
+				}
+				&.numOfPayments {
+					width: 100%;
+					margin-bottom: 15px;
+					label {
+						width: 100%;
+						display: block;
+					}
+					input {
+						display: block;
+						width: 100%;
+					}
+				}
+				&.cancelRecurringPayment {
+					width: 100%;
+					text-align: left;
+					margin-top: 20px;
+					margin-bottom: 20px;
+				}
+				&.saveRecurringPayment {
+					width: 100%;
+					text-align: left;
+					margin-top: 0;
+					a.btn {
+						float: left;
+						margin-left: 0;
+					}
+				}
+			}
+
+		}
+
+		.notes {
+			&.recurring {
+				background: url("img/icon-recurring.png") no-repeat;
+				padding-left: 20px;
+			}
+		}
+
+
+	}
+
+
+}

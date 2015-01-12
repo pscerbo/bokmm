@@ -1,0 +1,64 @@
+/**
+ * Call-To-Action Boxes (_cta.scss)
+ */
+
+.ctaWrap {
+	width: 100%;
+	max-width: $baseWidth;
+	@include cf;
+	margin-top: 5px;
+	margin-bottom: 30px;
+	.ctaBox {
+		float: left;
+		width: percentage(310px/960px);
+		margin-right: percentage(15px/960px);
+		@include rounded(10px);
+		border: 1px solid $borderColor;
+		background: #FFF;
+		padding: percentage(20px/960px);
+		h2 {
+			font-size: 22px;
+			color: #000;
+			font-weight: 300;
+			margin-bottom: 20px;
+		}
+		p {
+			font-size: 16px;
+			color: #000;
+			margin: 0 0 18px 0;
+		}
+		&.blue {
+			h2 {
+				color: #FFF;
+			}
+			p {
+				color: #FFF;
+			}
+			background: $boxBlue;
+			border: 1px solid $borderColorBlue;
+		}
+		&.last {
+			margin-right: 0;
+		}
+
+		/* Form Elements */
+		.form {
+			label {
+				font-size: 14px;
+				color: #000;
+				margin-bottom: 5px;
+				display: block;
+			}
+		}
+	}
+
+	@media screen and (min-width: 320px) and (max-width: 767px) {
+		.ctaBox {
+			float: none;
+			clear: both;
+			margin-bottom: 30px;
+			width: 100%;
+			padding: 20px;
+		}
+	}
+}

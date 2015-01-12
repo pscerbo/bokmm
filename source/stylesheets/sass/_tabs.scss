@@ -1,0 +1,121 @@
+/**
+ * Tabs (_tabs.scss)
+ */
+.tabs {
+	@include listReset;
+	width: 100%;
+	margin-top: -55px;
+	float: left;
+	ul.tabList {
+		@include listReset;
+		font-size: 0;
+		position: relative;
+		z-index: 100;
+		> li {
+			display: inline-block;
+			@include rounded(10px);
+			background: #FFF;
+			border: 1px solid $tabBorder;
+			margin-right: percentage(5px/310px);
+			&:last-child {
+				margin-right: 0;
+			}
+			&.ui-state-active {
+				border-width: 1px 1px 0 1px;
+				padding-bottom: 12px;
+				@include rounded(10px 10px 0 0);
+				background: url("img/tabs-shim.gif") repeat-x bottom left #FFF;
+			}
+			> a {
+				display: block;
+				text-align: center;
+				font-size: 15px;
+				padding: 10px 18px;
+				text-decoration: none;
+				outline: none;
+				&:after {
+					content: "";
+					width: auto;
+					height: 7px;
+					margin-top: 10px;
+					background: url("img/arrow-down-blue.png") no-repeat center center;
+					display: block;
+				}
+			}
+
+			@media screen and (min-width: 320px) and (max-width: 640px) {
+				width: 49%;
+				a {
+					padding: 10px 10px;
+				}
+			}
+		}
+	}
+	@media screen and (min-width: 768px) and (max-width: 960px) {
+		margin-top: -55px;
+	}
+	@media screen and (min-width: 481px) and (max-width: 767px) {
+		margin-top: -30px;
+	}
+	@media screen and (min-width: 320px) and (max-width: 480px) {
+		margin-top: 0px;
+	}
+
+	/* Tab Panels */
+	.ui-tabs-panel {
+		border: 1px solid $tabBorder;
+		@include rounded(10px);
+		background: #FFF;
+		margin-top: -1px;
+		padding: 25px;
+		@include cf;
+		&.firstPanel {
+			@include rounded(0 10px 10px 10px);
+			padding: 5px 25px 0 25px;
+		}
+		@media screen and (min-width: 320px) and (max-width: 480px) {
+			&.lastPanel {
+				@include rounded(10px 0 10px 10px);
+				border: 1px solid red;
+			}
+		}
+
+		h2 {
+			font-size: 18px;
+			margin-top: 10px;
+			float: left;
+		}
+
+		ul.actions {
+			@include listReset;
+			text-align: center;
+			margin: 30px 0;
+			li {
+				display: inline-block;
+				padding-left: percentage(45px/960px);
+				padding-right: percentage(45px/960px);
+				a {
+					span {
+						display: block;
+						margin-top: 15px;
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 320px) and (max-width: 767px) {
+			h2 {
+				clear: both;
+			}
+		}
+
+		@media screen and (min-width: 320px) and (max-width: 480px) {
+			a.btn.floatRight {
+				clear: both;
+				float: left;
+				white-space: nowrap;
+				margin-top: 10px;
+			}
+		}
+	}
+}

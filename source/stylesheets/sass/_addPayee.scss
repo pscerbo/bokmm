@@ -1,0 +1,51 @@
+/**
+ * Add Payee (_addPayee.scss)
+ */
+
+.payeeVerification {
+	@include cf;
+	width: 100%;
+	font-size: 0;
+	padding-bottom: 30px;
+	padding-top: 20px;
+	h2 {
+		text-transform: uppercase;
+		font-weight: 600;
+		width: percentage(700px/958px) !important;
+		color: $red;
+		margin-bottom: 15px;
+	}
+	.col {
+		display: inline-block;
+		width: 50%;
+		font-size: 16px;
+		margin-bottom: 30px;
+		padding-right: 30px;
+		h4 {
+			font-weight: 600;
+			margin-bottom: 5px;
+		}
+	}
+
+	input[type="submit"] {
+		font-size: 16px !important;
+		padding: 15px 50px !important;
+		margin-right: 20px;
+	}
+
+	a.btn {
+		display: inline-block;
+		margin-top: 20px;
+		font-size: 16px !important;
+		padding: 15px 50px !important;
+		margin-right: 20px;
+	}
+
+	@media screen and (max-width: 640px) {
+		.col {
+			width: 100%;
+		}
+	}
+
+
+}

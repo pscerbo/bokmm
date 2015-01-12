@@ -1,0 +1,161 @@
+/**
+ * Bank of Oklahoma - Online Banking Portal
+ * Author: Pasquale Scerbo [pscerbo@extractable.com]
+ */
+
+@import url("normalize.css");
+@import url("main.css");
+@import url("magnific-popup.css");
+@import url("jquery-ui.css");
+
+@import "sass/_mixins";
+@import "sass/_grid";
+
+/**
+ * Defaults
+ */
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	@include cf;
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 28px;
+	line-height: 28px;
+	font-weight: 300;
+	color: #333;
+	margin-bottom: 30px;
+	.toggle {
+		border-left: 1px solid $borderColor;
+		display: inline-block;
+		padding-left: 10px;
+		margin-left: 5px;
+		a {
+			font-size: 12px;
+			font-weight: 600;
+			display: block;
+			&.customize {
+				background: url("img/icon-gears-blue.png") no-repeat 0 5px;
+				padding-left: 25px;
+			}
+		}
+	}
+}
+
+h2 {
+	font-size: 22px;
+	color: #000;
+	font-weight: 300;
+}
+
+a {
+	text-decoration: none;
+	color: $linkBlue;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.cleaner {
+	clear: both;
+	height: 1%;
+}
+
+.floatLeft {
+	float: left;
+}
+
+.floatRight {
+	float: right;
+}
+
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+}
+
+.container {
+	width: 100%;
+	max-width: $baseWidth;
+	min-width: $minBaseWidth;
+	margin: 0 auto;
+	@include cf;
+
+	@media screen and (max-width: 1160px) {
+		padding-left: percentage(20px/960px);
+		padding-right: percentage(20px/960px);
+	}
+}
+
+/* Breakpoints */
+.visibleDesktop {
+	display: block;
+}
+
+.hiddenDesktop {
+	display: none;
+}
+
+.mobileBreak {
+	display: none
+}
+
+@media screen and (max-width: 480px) {
+	.mobileBreak {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.visibleDesktop {
+		display: none;
+	}
+	.hiddenDesktop {
+		display: block;
+	}
+}
+
+
+@import url("pushy.css");
+@import "sass/_buttons";
+@import "sass/_header";
+@import "sass/_modules";
+@import "sass/_jumpTo";
+@import "sass/_actions";
+@import "sass/_table";
+@import "sass/_forms";
+@import "sass/_menu";
+@import "sass/_cta";
+@import "sass/_help";
+@import "sass/_steps";
+@import "sass/_login";
+@import "sass/_alert";
+@import "sass/_lightbox";
+@import "sass/_footer";
+
+@import "sass/_password";
+
+@import "sass/_paymentPanel";
+@import "sass/_paymentOptions";
+@import "sass/_confirmation";
+@import "sass/_payee";
+@import "sass/_addPayee";
+@import "sass/_payments";
+@import "sass/_datepicker";
+@import "sass/_flashMessage";
+@import "sass/_terms";
+@import "sass/_recurringPayment";
+@import "sass/_transactionHistory";
+
+//Browser Fixes
+@import "sass/_browserFix";

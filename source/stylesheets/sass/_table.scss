@@ -1,0 +1,123 @@
+/**
+ * Table Layouts (_table.scss)
+ */
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 15px;
+	float: left;
+
+	&.transactions {
+		border-top: 1px solid $tableBorder;
+		td {
+			font-size: 12px;
+			padding: 7px 10px 7px 0;
+			vertical-align: top;
+			border-bottom: 1px solid $tableBorder;
+			&.widthdrawl {
+				color: $widthdrawl;
+			}
+			&:first-child {
+				max-width: 140px;
+			}
+			&:last-child {
+				padding-right: 0;
+				text-align: right;
+			}
+			.recurring {
+
+			}
+		}
+		@media screen and (min-width: 320px) and (max-width: 400px) {
+			td {
+				font-size: 10px !important;
+			}
+		}
+	}
+}
+
+.transactionOptions {
+	float: left;
+	@include cf;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	span {
+		font-size: 12px;
+	}
+	ul {
+		@include listReset;
+		float: right;
+		font-size: 0;
+		margin-top: 3px;
+		li {
+			display: inline-block;
+			font-size: 14px;
+			line-height: 14px;
+			border-left: 1px solid #d3d3d3;
+			padding-left: 10px;
+			margin-left: 10px;
+			&:first-child {
+				margin-left: 0;
+				padding-left: 0;
+				border-left: 0;
+			}
+		}
+	}
+	@media screen and (min-width: 320px) and (max-width: 480px) {
+		ul {
+			li {
+				font-size: 12px;
+			}
+		}
+	}
+	@media screen and (min-width: 320px) and (max-width: 767px) {
+		ul {
+			clear: both;
+			float: left;
+			display: block;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.accountInfoTable {
+	background: #FFF;
+	@include rounded(10px);
+	padding: 0 25px;
+	@include cf;
+	border: 1px solid $borderColor;
+	table {
+		margin: 0;
+		padding: 0;
+		border-collapse: collapse;
+		tr {
+			border-bottom: 1px solid $borderColor;
+			td {
+				font-size: 12px;
+				padding: 10px 30px 10px 0;
+			}
+			&.last {
+				border-bottom: 0;
+			}
+		}
+	}
+}
+
+a.pdf {
+	font-weight: 600;
+	padding-right: 30px;
+	white-space: nowrap;
+	&:after {
+		content: "";
+		width: 24px;
+		height: 24px;
+		background: url("img/icon-pdf.png") no-repeat 0 0;
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 15px;
+		margin-top: -3px;
+	}
+}
